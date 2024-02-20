@@ -1,4 +1,4 @@
-wait(8)
+wait(2)
 game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
 local hum = game.Players.LocalPlayer.Character.Humanoid local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
 local args1 = {[1] = { [1] = { ["\25"] = skill[1] }, [2] = "(" }}
@@ -98,7 +98,7 @@ hum.MoveToFinished:wait(0.5)
 hum:MoveTo(Vector3.new(919.7042236328125, 66.04268646240234, -10.56348991394043))
 hum.MoveToFinished:wait(0.5)
 AB()
-wait(8)
+wait(1)
 local args8 = {
     [1] = {
         [1] = {
