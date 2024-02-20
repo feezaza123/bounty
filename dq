@@ -1,4 +1,4 @@
-
+wait(8)
 game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
 local hum = game.Players.LocalPlayer.Character.Humanoid local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
 local args1 = {[1] = { [1] = { ["\25"] = skill[1] }, [2] = "(" }}
@@ -6,6 +6,7 @@ local args2 = { [1] = { [1] = { ["\25"] = skill[2] }, [2] = "("} } game.Players.
 local function AB()
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2)) end
 local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+
 hum:MoveTo(Vector3.new(-680.623046875, 21.072368621826172, 286.8155212402344))
 hum.MoveToFinished:wait(0.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-644.9977416992188, 21.072372436523438, 349.6024169921875)) wait(0.2)
@@ -97,4 +98,36 @@ hum.MoveToFinished:wait(0.5)
 hum:MoveTo(Vector3.new(919.7042236328125, 66.04268646240234, -10.56348991394043))
 hum.MoveToFinished:wait(0.5)
 AB()
+wait(8)
+local args8 = {
+    [1] = {
+        [1] = {
+            ["vote"] = "bonus",
+            ["\2"] = "vote"
+        },
+        [2] = "\17"
+    }
+}
 
+local args3 = {
+    [1] = {
+        [1] = {
+            ["vote"] = true,
+            ["\2"] = "vote"
+        },
+        [2] = "\17"
+    }
+}
+
+while true do wait(2)
+if game:GetService("Workspace")["Odin Reincarnation"].PrimaryPart == "HumanoidRootPart" then
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args3))
+else
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args8))
+end
+end
+
+while true do wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace")["Odin Reincarnation"].HumanoidRootPart.Position)
+AB()
+end
