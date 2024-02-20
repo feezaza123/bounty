@@ -1,4 +1,4 @@
-wait(8)
+
 game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
 local hum = game.Players.LocalPlayer.Character.Humanoid local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
 local args1 = {[1] = { [1] = { ["\25"] = skill[1] }, [2] = "(" }}
