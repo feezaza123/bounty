@@ -1,4 +1,4 @@
-wait(5)
+wait(8)
 game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
 local hum = game.Players.LocalPlayer.Character.Humanoid local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
 local args1 = {[1] = { [1] = { ["\25"] = skill[1] }, [2] = "(" }}
@@ -120,7 +120,7 @@ local args3 = {
 }
 
 while true do wait(2)
-if game:GetService("Workspace")["Odin Reincarnation"].PrimaryPart == "HumanoidRootPart" then
+if game:GetService("Workspace")["Odin Reincarnation"] then
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args3))
 else
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args8))
