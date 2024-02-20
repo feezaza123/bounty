@@ -1,49 +1,113 @@
-
+wait(8)
+game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
+local hum = game.Players.LocalPlayer.Character.Humanoid local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
+local args1 = {[1] = { [1] = { ["\25"] = skill[1] }, [2] = "(" }}
+local args2 = { [1] = { [1] = { ["\25"] = skill[2] }, [2] = "("} } game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 26
+local function AB()
+game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2)) end
+local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+hum:MoveTo(Vector3.new(-680.623046875, 21.072368621826172, 286.8155212402344))
+hum.MoveToFinished:wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-644.9977416992188, 21.072372436523438, 349.6024169921875)) wait(0.2)
+AB() wait(4) 
+hum:MoveTo(Vector3.new(-641.6488037109375, 21.072368621826172, 353.02374267578125))
+hum.MoveToFinished:wait(0.5) AB() wait(1)
+hum:MoveTo(Vector3.new(-565.8367919921875, 21.072368621826172, 456.95318603515625))
+hum.MoveToFinished:wait(0.5)
+hum:MoveTo(Vector3.new(-499.9527587890625, 21.072368621826172, 444.71636962890625))
+hum.MoveToFinished:wait(1)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-403.443115234375, 27.04485511779785, 436.34619140625)) wait(1)
+AB() wait(1)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-402.5219421386719, 27.014469146728516, 405.8915100097656)) wait(6)
+AB() wait(3)
+hum:MoveTo(Vector3.new(-400.5318603515625, 27.01358413696289, 416.8852233886719))
+hum.MoveToFinished:wait(0.5)
+AB() wait(3.5)
+hum:MoveTo(Vector3.new(-176.63002014160156, 21.21625518798828, 342.469482421875))
+hum.MoveToFinished:wait(0.5)
+AB() --BOSS2
+hum:MoveTo(Vector3.new(25.790714263916016, 21.068742752075195, 296.5038757324219))
+hum.MoveToFinished:wait(0.5)
+AB()
 wait(6)
-spawn(function()
-    while task.wait() do
-        if game.Players.LocalPlayer.Team == nil then
-            pcall(function()
-                if _G.Team == "Pirate" then
-                    game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Size = UDim2.new(10000,1000,10000,1000)
-                    game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Position = UDim2.new(-4,0,-5,0)
-                    wait(.5)
-                    game:GetService("VirtualInputManager"):SendMouseButtonEvent(605,394,0,true,game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton,0)
-                    game:GetService("VirtualInputManager"):SendMouseButtonEvent(605,394,0,false,game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton,0)
-					print("Chroos Team Pirate")
-                elseif _G.Team == "Marine" then
-                    game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Size = UDim2.new(10000,1000,10000,1000)
-                    game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Marines.Frame.ViewportFrame.TextButton.Position = UDim2.new(-4,0,-5,0)
-                    wait(.5)
-                    game:GetService("VirtualInputManager"):SendMouseButtonEvent(605,394,0,true,game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton,0)
-                    game:GetService("VirtualInputManager"):SendMouseButtonEvent(605,394,0,false,game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton,0)
-					print("Chroos Team marine")
-                else
-                    game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Size = UDim2.new(10000,1000,10000,1000)
-                    game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton.Position = UDim2.new(-4,0,-5,0)
-                    wait(.5)
-                    game:GetService("VirtualInputManager"):SendMouseButtonEvent(605,394,0,true,game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton,0)
-                    game:GetService("VirtualInputManager"):SendMouseButtonEvent(605,394,0,false,game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Container.Pirates.Frame.ViewportFrame.TextButton,0)
-					print("Chroos Team Pirate")
-                end
-            end)
-        end
-    end
-end)
+hum:MoveTo(Vector3.new(6.469936370849609, 21.068742752075195, 292.13702392578125))
+hum.MoveToFinished:wait(0.5)
+AB() wait(6) ---
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(19.086408615112305, 21.068742752075195, 272.9256591796875)) wait(1)
+AB() wait(4)
+hum:MoveTo(Vector3.new(120.46063995361328, 21.216815948486328, 247.9920654296875))
+hum.MoveToFinished:wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(145.72727966308594, 21.216413497924805, 245.9475860595703)) wait(1)
+AB() wait(6.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(200.27444458007812, 21.216205596923828, 214.75259399414062)) wait(1)
+AB() wait(1)
+hum:MoveTo(Vector3.new(369.9705505371094, 18.6315975189209, 174.61524963378906))
+hum.MoveToFinished:wait(0.5) --checkpoint
 
+hum:MoveTo(Vector3.new(384.88818359375, -58.45048141479492, 169.67495727539062))
+hum.MoveToFinished:wait(0.5) --ll
 
-spawn(function()
-    while task.wait() do
-        if game.Players.LocalPlayer.Team ~= nil then
-pcall(function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-346.7385559082031, 73.08502197265625, 155.9029083251953)
+hum:MoveTo(Vector3.new(414.934326171875, -58.45048141479492, 162.96115112304688))
+hum.MoveToFinished:wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(422.22119140625, -58.45048141479492, 170.07481384277344)) wait(1)
+AB() wait(5.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(438.0868835449219, -58.45048141479492, 169.5250244140625)) wait(2)
+AB() wait(4)
 
-local args = {
-    [1] = "EnablePvp"
+hum:MoveTo(Vector3.new(478.6464538574219, -58.45048141479492, 202.57998657226562))
+hum.MoveToFinished:wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(489.4344482421875, -58.452720642089844, 195.73184204101562)) wait(1)
+AB() wait(4)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(529.9732666015625, -58.45115280151367, 149.5105743408203)) wait(3)
+AB() wait(4)
+
+hum:MoveTo(Vector3.new(526.687744140625, -58.45143127441406, 147.37139892578125))
+hum.MoveToFinished:wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(510.4998474121094, -58.45103073120117, 133.64599609375)) wait(2)
+AB() wait(1)
+
+hum:MoveTo(Vector3.new(366.53253173828125, -58.451019287109375, 35.68464279174805))
+hum.MoveToFinished:wait(0.5)
+hum:MoveTo(Vector3.new(443.8460693359375, -36.053993225097656, -8.393189430236816))
+hum.MoveToFinished:wait(0.5)
+hum:MoveTo(Vector3.new(557.8267822265625, -3.1322073936462402, 22.04058837890625))
+hum.MoveToFinished:wait(0.5)
+hum:MoveTo(Vector3.new(604.7590942382812, 16.645145416259766, 94.58983612060547))
+hum.MoveToFinished:wait(0.5)
+
+hum:MoveTo(Vector3.new(638.4157104492188, 17.298742294311523, 106.26364135742188))
+hum.MoveToFinished:wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(733.0051879882812, 16.6900691986084, 73.51078033447266)) wait(1)
+AB() wait(5)
+
+hum:MoveTo(Vector3.new(631.0394897460938, 17.03561782836914, 72.05393981933594))
+hum.MoveToFinished:wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(735.00048828125, 17.28742218017578, 36.16952896118164)) wait(1)
+AB() wait(2)
+
+hum:MoveTo(Vector3.new(820.9893798828125, 21.719247817993164, 22.22835350036621))
+hum.MoveToFinished:wait(0.5)
+
+hum:MoveTo(Vector3.new(820.9893798828125, 21.719247817993164, 22.22835350036621))
+hum.MoveToFinished:wait(0.5)
+
+hum:MoveTo(Vector3.new(879.9227905273438, 47.94123840332031, 4.450686454772949))
+hum.MoveToFinished:wait(0.5)
+
+hum:MoveTo(Vector3.new(919.7042236328125, 66.04268646240234, -10.56348991394043))
+hum.MoveToFinished:wait(0.5)
+AB()
+
+wait(5)
+local args3 = {
+    [1] = {
+        [1] = {
+            ["vote"] = true,
+            ["\2"] = "vote"
+        },
+        [2] = "\17"
+    }
 }
-
-game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                end)
-            end
-        end
-end)
+while true do wait(2)
+game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args3))
+end
