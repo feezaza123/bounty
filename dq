@@ -64,7 +64,7 @@ hum:MoveTo(Vector3.new(369.9705505371094, 18.6315975189209, 174.61524963378906))
 hum.MoveToFinished:wait(0.5) --checkpoint
 
 hum:MoveTo(Vector3.new(384.88818359375, -58.45048141479492, 169.67495727539062))
-hum.MoveToFinished:wait(0.5) --ll
+hum.MoveToFinished:wait(2) --ll
 
 hum:MoveTo(Vector3.new(414.934326171875, -58.45048141479492, 162.96115112304688))
 hum.MoveToFinished:wait(0.5)
