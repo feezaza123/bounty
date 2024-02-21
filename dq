@@ -2,7 +2,7 @@ wait(2)
 game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
 local hum = game.Players.LocalPlayer.Character.Humanoid local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
 local args1 = {[1] = { [1] = { ["\25"] = skill[1] }, [2] = "(" }}
-local args2 = { [1] = { [1] = { ["\25"] = skill[2] }, [2] = "("} } game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 26
+local args2 = { [1] = { [1] = { ["\25"] = skill[2] }, [2] = "("} } game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 27
 local args8 = {
     [1] = {
         [1] = {
@@ -51,6 +51,7 @@ AB()
 wait(6)
 hum:MoveTo(Vector3.new(6.469936370849609, 21.068742752075195, 292.13702392578125))
 hum.MoveToFinished:wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(71.07523345947266, 21.068742752075195, 223.57183837890625)) wait(1)
 AB() wait(6) ---
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(19.086408615112305, 21.068742752075195, 272.9256591796875)) wait(1)
 AB() wait(4)
