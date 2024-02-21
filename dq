@@ -123,5 +123,6 @@ while true do wait(0.5)
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args8))
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args3))
     humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1060.71, 84.2022, -52.5533))
-    AB()
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) 
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
 end
