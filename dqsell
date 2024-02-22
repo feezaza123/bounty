@@ -1,0 +1,68 @@
+local function weapon()
+    for i,v in pairs(game.Players.LocalPlayer.PlayerGui.inventory.mainBackground.innerBackground.rightSideFrame.ScrollingFrame:GetDescendants()) do
+        if v.ClassName == "ImageLabel" and v.DataCost == 54 and v.itemType.Value == "weapon" and v.ImageColor3 ~= Color3.new(146/255, 70/255, 159/255) and v.ImageColor3 ~= Color3.new(244/255, 154/255, 9/255) then
+            local argsw = {
+                [1] = {
+                    ["ability"] = {},
+                    ["helmet"] = {},
+                    ["chest"] = {},
+                    ["weapon"] = {v.itemType.uniqueItemNum.Value}
+                }
+            }
+            game:GetService("ReplicatedStorage").remotes.sellItemEvent:FireServer(unpack(argsw))
+    end
+    end
+end
+
+local function chest()
+    for i,v in pairs(game.Players.LocalPlayer.PlayerGui.inventory.mainBackground.innerBackground.rightSideFrame.ScrollingFrame:GetDescendants()) do
+        if v.ClassName == "ImageLabel" and v.DataCost == 54 and v.itemType.Value == "chest" and v.ImageColor3 ~= Color3.new(146/255, 70/255, 159/255) and v.ImageColor3 ~= Color3.new(244/255, 154/255, 9/255) then
+            local argsc = {
+                [1] = {
+                    ["ability"] = {},
+                    ["helmet"] = {},
+                    ["chest"] = {v.itemType.uniqueItemNum.Value},
+                    ["weapon"] = {}
+                }
+            }
+            game:GetService("ReplicatedStorage").remotes.sellItemEvent:FireServer(unpack(argsc))
+    end
+    end
+end
+
+local function helmet()
+    for i,v in pairs(game.Players.LocalPlayer.PlayerGui.inventory.mainBackground.innerBackground.rightSideFrame.ScrollingFrame:GetDescendants()) do
+        if v.ClassName == "ImageLabel" and v.DataCost == 54 and v.itemType.Value == "helmet" and v.ImageColor3 ~= Color3.new(146/255, 70/255, 159/255) and v.ImageColor3 ~= Color3.new(244/255, 154/255, 9/255) then
+            local argsh = {
+                [1] = {
+                    ["ability"] = {},
+                    ["helmet"] = {v.itemType.uniqueItemNum.Value},
+                    ["chest"] = {},
+                    ["weapon"] = {}
+                }
+            }
+            game:GetService("ReplicatedStorage").remotes.sellItemEvent:FireServer(unpack(argsh))
+    end
+    end
+end
+
+local function ability()
+    for i,v in pairs(game.Players.LocalPlayer.PlayerGui.inventory.mainBackground.innerBackground.rightSideFrame.ScrollingFrame:GetDescendants()) do
+        if v.ClassName == "ImageLabel" and v.DataCost == 54 and v.itemType.Value == "ability" and v.ImageColor3 ~= Color3.new(244/255, 154/255, 9/255) then
+            local argsaa = {
+                [1] = {
+                    ["ability"] = {v.itemType.uniqueItemNum.Value},
+                    ["helmet"] = {},
+                    ["chest"] = {},
+                    ["weapon"] = {}
+                }
+            }
+            game:GetService("ReplicatedStorage").remotes.sellItemEvent:FireServer(unpack(argsaa))
+    end
+    end
+end
+
+weapon()
+chest()
+helmet()
+ability()
