@@ -50,6 +50,7 @@ hum.MoveToFinished:wait()
 
 hum:MoveTo(Vector3.new(2520.20166015625, 37.94798278808594, -2699.5341796875))
 hum.MoveToFinished:wait(3)
+wait(3)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2512.81298828125, 84.6528091430664, -2701.54150390625)
 
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2549.36328125, 37.519535064697266, -2728.2177734375)) wait(4)
