@@ -24,7 +24,7 @@ local args3 = {
 }
 local function Re()
 while true do wait(15)
-local args3 = {
+local argsaa = {
     [1] = {
         [1] = {
             ["vote"] = true,
@@ -33,7 +33,7 @@ local args3 = {
         [2] = "\17"
     }
 }
-    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args3))
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsaa))
 end
 end
 local function AB()
