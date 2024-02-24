@@ -22,25 +22,11 @@ local args3 = {
         [2] = "\17"
     }
 }
-local function Re()
-while true do wait(15)
-local argsaa = {
-    [1] = {
-        [1] = {
-            ["vote"] = true,
-            ["\2"] = "vote"
-        },
-        [2] = "\17"
-    }
-}
-    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsaa))
-end
-end
+
 local function AB()
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2)) end
 local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
 
-Re() ;
 hum:MoveTo(Vector3.new(-680.623046875, 21.072368621826172, 286.8155212402344))
 hum.MoveToFinished:wait(0.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-644.9977416992188, 21.072372436523438, 349.6024169921875)) wait(0.2)
