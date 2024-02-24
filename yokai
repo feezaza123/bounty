@@ -1,0 +1,40 @@
+local hum = game.Players.LocalPlayer.Character.Humanoid 
+local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
+local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+local args1 = {[1] = { [1] = { ["\25"] = skill[1] }, [2] = "(" }}
+local args2 = { [1] = { [1] = { ["\25"] = skill[2] }, [2] = "("} } 
+local function AB()
+game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) 
+game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
+end
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 27
+
+hum:MoveTo(Vector3.new(2796.95166015625, 30.7031192779541, -2099.792236328125))
+hum.MoveToFinished:wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2729.826171875, 25.295387268066406, -2133.94189453125)) wait(0.2)
+AB() wait(6.2) AB() wait(6.2)
+
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2747.858642578125, 25.2968692779541, -2159.623046875)) wait(0.2)
+AB() wait(6.2) AB() wait(1.5)
+
+hum:MoveTo(Vector3.new(2680.24267578125, 25.2968692779541, -2193.901123046875))
+hum.MoveToFinished:wait(1)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2626.372314453125, 8.49999713897705, -2220.084716796875)) wait(0.2)
+AB() wait(6.2) AB() wait(6)
+
+hum:MoveTo(Vector3.new(2630.94970703125, 25.453168869018555, -2159.25390625))
+hum.MoveToFinished:wait()
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2583.410888671875, 8.49999713897705, -2311.311767578125)) wait(0.2)
+AB() wait(6.2) AB() wait(1)
+
+hum:MoveTo(Vector3.new(2639.450927734375, 25.199995040893555, -2166.744140625))
+hum.MoveToFinished:wait()
+hum:MoveTo(Vector3.new(2609.8720703125, 8.49999713897705, -2195.320556640625))
+hum.MoveToFinished:wait()
+
+hum:MoveTo(Vector3.new(2584.614501953125, 8.49999713897705, -2329.915771484375))
+hum.MoveToFinished:wait(1.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2569.684814453125, 8.49999713897705, -2513.348388671875)) wait(0.2)
+AB() wait(6.2) AB() wait(1)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2530.429931640625, 8.49999713897705, -2510.44091796875)) wait(6.2)
+AB() wait(6.2) AB() wait(1)
