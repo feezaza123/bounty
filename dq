@@ -22,6 +22,9 @@ local args3 = {
         [2] = "\17"
     }
 }
+while true do wait(15)
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args3))
+end
 local function AB()
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2)) end
 local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
