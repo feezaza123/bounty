@@ -58,6 +58,25 @@ AB()
 wait(0.5)
 until game:GetService("Workspace").dungeon.room3.enemyFolder["Tatsu, Lord of Tides"].Humanoid.Health <= 0
 
+hum:MoveTo(Vector3.new(2518.37060546875, 38.36859130859375, -2701.249267578125))
+hum.MoveToFinished:wait()
+hum:MoveTo(Vector3.new(2509.49169921875, 37.519535064697266, -2733.11279296875))
+hum.MoveToFinished:wait()
+hum:MoveTo(Vector3.new(2426.855224609375, 62.395484924316406, -2735.4775390625))
+hum.MoveToFinished:wait()
+
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2283.9248046875, 62.39999008178711, -2746.552001953125)) wait(0.5)
+AB() wait(2.5)
+
+hum:MoveTo(Vector3.new(2570.197509765625, 37.519535064697266, -2730.93701171875))
+hum.MoveToFinished:wait()
+hum:MoveTo(Vector3.new(2426.855224609375, 62.395484924316406, -2735.4775390625))
+hum.MoveToFinished:wait()
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2283.9248046875, 62.39999008178711, -2746.552001953125)) wait(2.5)
+AB() wait(2.5)
+
+
+
 
 
 
