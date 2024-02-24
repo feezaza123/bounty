@@ -40,7 +40,7 @@ local function AB()
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2)) end
 local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
 
-Re()
+Re() ;
 hum:MoveTo(Vector3.new(-680.623046875, 21.072368621826172, 286.8155212402344))
 hum.MoveToFinished:wait(0.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-644.9977416992188, 21.072372436523438, 349.6024169921875)) wait(0.2)
