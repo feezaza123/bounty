@@ -55,6 +55,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2512.812
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2549.36328125, 37.519535064697266, -2728.2177734375)) wait(4)
 repeat
 AB()
+wait(0.5)
 until game:GetService("Workspace").dungeon.room3.enemyFolder["Tatsu, Lord of Tides"].Humanoid.Health <= 0
 
 
