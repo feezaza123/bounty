@@ -22,7 +22,7 @@ AB() wait(6.2) AB() wait(1.5)
 hum:MoveTo(Vector3.new(2680.24267578125, 25.2968692779541, -2193.901123046875))
 hum.MoveToFinished:wait(1)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2626.372314453125, 8.49999713897705, -2220.084716796875)) wait(0.2)
-AB() wait(6.2) AB() wait(6)
+AB() wait(6.2) AB() wait(3)
 
 hum:MoveTo(Vector3.new(2630.94970703125, 25.453168869018555, -2159.25390625))
 hum.MoveToFinished:wait()
@@ -49,7 +49,7 @@ hum:MoveTo(Vector3.new(2551.740234375, 37.7113151550293, -2668.7626953125))
 hum.MoveToFinished:wait()
 
 hum:MoveTo(Vector3.new(2520.20166015625, 37.94798278808594, -2699.5341796875))
-hum.MoveToFinished:wait()
+hum.MoveToFinished:wait(3)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2512.81298828125, 84.6528091430664, -2701.54150390625)
 
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2549.36328125, 37.519535064697266, -2728.2177734375)) wait(4)
