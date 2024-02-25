@@ -1,33 +1,5 @@
-if game.PlaceId == 2414851778 then
-    wait(5)
-    repeat wait(3)
-        game:GetService("Players").LocalPlayer.PlayerGui.introGui.title.Frame.TextButton.Size = UDim2.new(100000,10000,100000,10000)
-        game:GetService("Players").LocalPlayer.PlayerGui.introGui.title.Frame.TextButton.Position = UDim2.new(0.5,0,-4,0)
-        game:GetService("VirtualUser"):ClickButton1(Vector2.new(1,1))
-    until game.Players.LocalPlayer.Character ~= nil
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Sell", true))()
-    local argsgg = {
-        [1] = {
-            [1] = {
-                [1] = "\1",
-                [2] = {
-                    ["partyData"] = {
-                        ["difficulty"] = "Nightmare",
-                        ["mode"] = "Hardcore",
-                        ["dungeonName"] = "Northern Lands"
-                    },
-                    ["\2"] = "PlaySolo"
-                }
-            },
-            [2] = "\30"
-        }
-    }
-    wait(3)
-    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsgg))
-else
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Main", true))()
-end
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Main2", true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Retry", true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/FixLag", true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Checkinventory", true))()
