@@ -1,4 +1,4 @@
-while true do wait(10)
+repeat wait(5)
 local argsex = {
     [1] = {
         [1] = {
@@ -9,4 +9,4 @@ local argsex = {
     }
 }
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsex))
-end
+until not game.Players.LocalPlayer
