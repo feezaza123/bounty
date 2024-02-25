@@ -1,4 +1,6 @@
+coroutine.wrap(function()
 wait(360)
 local ts = game:GetService("TeleportService")
 local p = game:GetService("Players").LocalPlayer
 ts:Teleport(2414851778, p)
+end)()
