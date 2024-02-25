@@ -1,6 +1,7 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Retry", true))();
-loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Main2", true))();
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/FixLag", true))();
+loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Main2", true))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/FixLag", true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Checkinventory", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Retry", true))()
 
