@@ -12,6 +12,7 @@ if game.PlaceId == 2414851778 then
         game:GetService("VirtualUser"):ClickButton1(Vector2.new(x,1))
         game:GetService("VirtualUser"):ClickButton1(Vector2.new(x,y))
     until game.Players.LocalPlayer.Character ~= nil
+    wait(2)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Sell", true))()
     local argsgg = {
         [1] = {
