@@ -1,4 +1,5 @@
-repeat wait(5)
+coroutine.wrap(function()
+	while true do
 local argsex = {
     [1] = {
         [1] = {
@@ -9,4 +10,9 @@ local argsex = {
     }
 }
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsex))
-until not game.Players.LocalPlayer
+	wait(7)
+	end
+end)()
+
+
+
