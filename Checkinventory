@@ -1,0 +1,7 @@
+while true do wait(1)
+    if #game:GetService("Players").LocalPlayer.PlayerGui.inventory.mainBackground.innerBackground.rightSideFrame.ScrollingFrame:GetChildren() >= 270 and game.PlaceID ~= 2414851778 then
+    local ts = game:GetService("TeleportService")
+    local p = game:GetService("Players").LocalPlayer
+    ts:Teleport(2414851778, p)
+    end
+end
