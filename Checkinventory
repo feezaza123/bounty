@@ -1,9 +1,9 @@
-a = 0
-repeat wait(5)
-a = a + 1
+coroutine.wrap(function()
 if #game:GetService("Players").LocalPlayer.PlayerGui.inventory.mainBackground.innerBackground.rightSideFrame.ScrollingFrame:GetChildren() >= 20 and game.PlaceId ~= 2414851778 then
     local ts = game:GetService("TeleportService")
     local p = game:GetService("Players").LocalPlayer
     ts:Teleport(2414851778, p)
     end
-until a = 70
+	wait(7)
+	end
+end)()
