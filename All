@@ -1,4 +1,4 @@
-if game.PlaceID == 2414851778 then
+if game.PlaceId == 2414851778 then
     wait(5)
     repeat wait(3)
         game:GetService("Players").LocalPlayer.PlayerGui.introGui.title.Frame.TextButton.Size = UDim2.new(100000,10000,100000,10000)
