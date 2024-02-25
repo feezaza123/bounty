@@ -1,4 +1,4 @@
-while true do wait(2)
+while true do wait(10)
 local argsex = {
     [1] = {
         [1] = {
