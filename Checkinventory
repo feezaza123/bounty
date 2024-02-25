@@ -1,6 +1,6 @@
 coroutine.wrap(function()
 while true do wait(7)
-if #game:GetService("Players").LocalPlayer.PlayerGui.inventory.mainBackground.innerBackground.rightSideFrame.ScrollingFrame:GetChildren() >= 20 and game.PlaceId ~= 2414851778 then
+if #game:GetService("Players").LocalPlayer.PlayerGui.inventory.mainBackground.innerBackground.rightSideFrame.ScrollingFrame:GetChildren() >= 285 and game.PlaceId ~= 2414851778 then
     local ts = game:GetService("TeleportService")
     local p = game:GetService("Players").LocalPlayer
     ts:Teleport(2414851778, p)
