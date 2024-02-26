@@ -1,0 +1,6 @@
+while true do wait(2)
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args8))
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args8))
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args8))
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args3))
+end
