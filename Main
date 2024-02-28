@@ -1,9 +1,26 @@
 repeat wait() until game:IsLoaded()
 wait(2)
 game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
-local hum = game.Players.LocalPlayer.Character.Humanoid local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
-local args1 = {[1] = { [1] = { ["\25"] = skill[1] }, [2] = "(" }}
-local args2 = { [1] = { [1] = { ["\25"] = skill[2] }, [2] = "("} } game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 27
+local hum = game.Players.LocalPlayer.Character.Humanoid
+local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
+local args1 = {
+    [1] = {
+        [1] = {
+            ["\28"] = skill[1]
+        },
+        [2] = "+"
+    }
+}
+
+local args2 = {
+    [1] = {
+        [1] = {
+            ["\28"] = skill[2]
+        },
+        [2] = "+"
+    }
+} 
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 27
 local args8 = {
     [1] = {
         [1] = {
@@ -24,7 +41,10 @@ local args3 = {
 }
 
 local function AB()
-game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2)) end
+game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) 
+game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2)) 
+end
+
 local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
 
 hum:MoveTo(Vector3.new(-680.623046875, 21.072368621826172, 286.8155212402344))
