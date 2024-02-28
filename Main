@@ -146,8 +146,23 @@ while true do wait()
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args8))
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args3))
     local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
-    local args1 = {[1] = { [1] = { ["\25"] = skill[1] }, [2] = "(" }}
-    local args2 = { [1] = { [1] = { ["\25"] = skill[2] }, [2] = "("} }
+local args1 = {
+    [1] = {
+        [1] = {
+            ["\28"] = skill[1]
+        },
+        [2] = "+"
+    }
+}
+
+local args2 = {
+    [1] = {
+        [1] = {
+            ["\28"] = skill[2]
+        },
+        [2] = "+"
+    }
+} 
     local Player = game:GetService("Players").LocalPlayer
     local char = Player.Character or Player.CharacterAdded:Wait()
     local humrp = char:WaitForChild("HumanoidRootPart")
