@@ -14,22 +14,22 @@ if game.PlaceId == 2414851778 then
     until game.Players.LocalPlayer.Character ~= nil
     wait(2)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Sell", true))()
-    local argsgg = {
+local argsgg = {
+    [1] = {
         [1] = {
-            [1] = {
-                [1] = "\1",
-                [2] = {
-                    ["partyData"] = {
-                        ["difficulty"] = "Nightmare",
-                        ["mode"] = "Hardcore",
-                        ["dungeonName"] = "Northern Lands"
-                    },
-                    ["\2"] = "PlaySolo"
-                }
-            },
-            [2] = "\30"
-        }
+            [1] = "\1",
+            [2] = {
+                ["partyData"] = {
+                    ["difficulty"] = "Nightmare",
+                    ["mode"] = "Hardcore",
+                    ["dungeonName"] = "Northern Lands"
+                },
+                ["\2"] = "PlaySolo"
+            }
+        },
+        [2] = "!"
     }
+}
     wait(3)
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsgg))
 else
