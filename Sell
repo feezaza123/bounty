@@ -1,6 +1,6 @@
 local function weapon()
     for i,v in pairs(game.Players.LocalPlayer.PlayerGui.inventory.mainBackground.innerBackground.rightSideFrame.ScrollingFrame:GetDescendants()) do
-        if v.ClassName == "ImageLabel" and v.DataCost == 54 and v.itemType.Value == "weapon" and v.ImageColor3 ~= Color3.new(244/255, 154/255, 9/255) then
+        if v.ClassName == "ImageLabel" and v.DataCost == 54 and v.itemType.Value == "weapon" and v.ImageColor3 ~= Color3.new(244/255, 154/255, 9/255) and v.ImageColor3 ~= Color3.new(255/255, 0/255, 0/255) then
             local argsw = {
                 [1] = {
                     ["ability"] = {},
