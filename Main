@@ -8,7 +8,7 @@ local args1 = {
         [1] = {
             ["\28"] = skill[1]
         },
-        [2] = "+"
+        [2] = "*"
     }
 }
 
@@ -17,9 +17,9 @@ local args2 = {
         [1] = {
             ["\28"] = skill[2]
         },
-        [2] = "+"
+        [2] = "*"
     }
-} 
+}
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 27
 local args8 = {
     [1] = {
