@@ -1,10 +1,25 @@
---Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
 local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
-local args1 = {[1] = { [1] = { ["\25"] = skill[1] }, [2] = "(" }}
-local args2 = { [1] = { [1] = { ["\25"] = skill[2] }, [2] = "("} } 
+local args1 = {
+    [1] = {
+        [1] = {
+            ["\28"] = skill[1]
+        },
+        [2] = "*"
+    }
+}
+
+local args2 = {
+    [1] = {
+        [1] = {
+            ["\28"] = skill[2]
+        },
+        [2] = "*"
+    }
+}
+
 local function AB()
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) 
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
@@ -75,18 +90,3 @@ hum:MoveTo(Vector3.new(2426.855224609375, 62.395484924316406, -2735.4775390625))
 hum.MoveToFinished:wait()
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2283.9248046875, 62.39999008178711, -2746.552001953125)) wait(2.5)
 AB() wait(2.5)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
