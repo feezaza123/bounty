@@ -35,6 +35,7 @@ local function checkmob()
     for i,v in pairs(game:GetService("Workspace").dungeon:GetDescendants()) do
         if v.ClassName == "Model" and v.Parent.Name == "enemyFolder" then
             humrp.CFrame = CFrame.lookAt(humrp.Position, v.HumanoidRootPart.Position)
+            AB()
         end
     end
 end
@@ -73,14 +74,19 @@ AB() wait(6.2) AB() wait(1)
 
 hum:MoveTo(Vector3.new(2598.33740234375, 8.49999713897705, -2259.34521484375))
 hum.MoveToFinished:wait(2)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2530.429931640625, 8.49999713897705, -2510.44091796875)) wait(3)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2557.927734375, 8.499979972839355, -2400.92431640625)) wait(3)
 AB() wait(2)
 
 hum:MoveTo(Vector3.new(2582.1533203125, 8.49999713897705, -2332.3759765625))
-hum.MoveToFinished:wait()
+hum.MoveToFinished:wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2560.48193359375, 8.499996185302734, -2399.3984375))
 cooldown() AB()
 
-repeat wait()
+repeat wait(1)
 checkmob()
 AB()
-until not game:GetService("Workspace").dungeon.room2.Part
+until not game:GetService("Workspace").dungeon.room2.barrier.Part
+
+hum:MoveTo(Vector3.new(2558.1396484375, 8.499999046325684, -2502.09326171875))
+hum.MoveToFinished:wait()
+AB()
