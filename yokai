@@ -32,7 +32,7 @@ end
 
 local function checkmob()
     for i,v in pairs(game:GetService("Workspace").dungeon:GetDescendants()) do
-        if v.ClassName == "Model" and v.Parent.Name == "enemyFolder" then and v.Name ~= "Tatsu, Lord of Tides" then
+        if v.ClassName == "Model" and v.Parent.Name == "enemyFolder" and v.Name ~= "Tatsu, Lord of Tides" then
             humrp.CFrame = CFrame.lookAt(humrp.Position, v.Head.Position)
             AB()
         end
