@@ -83,12 +83,7 @@ humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2560.48193359375, 8.499
 cooldown() AB()
 
 repeat wait()
-    for i,v in pairs(game:GetService("Workspace").dungeon:GetDescendants()) do
-        if v.ClassName == "Model" and v.Parent.Name == "enemyFolder" then
-            humrp.CFrame = CFrame.lookAt(humrp.Position, v.HumanoidRootPart.Position)
-            AB()
-        end
-    end
+checkmob()
 until not game:GetService("Workspace").dungeon.room2:FindFirstChild("barrier")
 print("GO TO BOSS 1")
 wait(1)
