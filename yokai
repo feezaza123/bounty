@@ -31,6 +31,14 @@ local function cooldown()
     until game:GetService("Players").LocalPlayer.Backpack["Void Dragon"].cooldown.Value <= 0
 end
 
+local function checkmob()
+    for i,v in pairs(game:GetService("Workspace").dungeon.room2.enemyFolder:GetDescendants()) do
+        if v.ClassName == "Model" and v.Parent.Name == "enemyFolder" then
+            humrp.CFrame = CFrame.lookAt(humrp.Position, v.HumanoidRootPart.Position)
+        end
+    end
+end
+
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 27
 
 hum:MoveTo(Vector3.new(2825.901123046875, 31.3199462890625, -2076.94287109375))
@@ -71,3 +79,13 @@ AB() wait(2)
 hum:MoveTo(Vector3.new(2582.1533203125, 8.49999713897705, -2332.3759765625))
 hum.MoveToFinished:wait()
 cooldown() AB()
+
+repeat wait()
+checkmob()
+AB()
+until not game:GetService("Workspace").dungeon.room2.Part
+
+
+
+
+
