@@ -26,6 +26,11 @@ game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1))
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
 end
 
+local function cooldown()
+repeat wait()
+until game:GetService("Players").LocalPlayer.Backpack["Void Dragon"].cooldown <= 0
+end
+
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 27
 
 hum:MoveTo(Vector3.new(2825.901123046875, 31.3199462890625, -2076.94287109375))
@@ -61,6 +66,9 @@ AB() wait(6.2) AB() wait(1)
 hum:MoveTo(Vector3.new(2598.33740234375, 8.49999713897705, -2259.34521484375))
 hum.MoveToFinished:wait(2)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2530.429931640625, 8.49999713897705, -2510.44091796875)) wait(3)
-AB()
+AB() wait(2)
 
+hum:MoveTo(Vector3.new(2582.1533203125, 8.49999713897705, -2332.3759765625))
+hum.MoveToFinished:wait()
+cooldown() AB()
 
