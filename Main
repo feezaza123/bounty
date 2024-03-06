@@ -83,7 +83,7 @@ cooldown() AB()
 repeat wait(1)
 checkmob()
 AB()
-until not game:GetService("Workspace").dungeon.room2.barrier
+until not game:GetService("Workspace").dungeon.room2.barrier.Part
 
 hum:MoveTo(Vector3.new(2558.1396484375, 8.499999046325684, -2502.09326171875))
 hum.MoveToFinished:wait()
