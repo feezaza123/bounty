@@ -1,3 +1,4 @@
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -88,7 +89,7 @@ repeat wait()
             AB()
         end
     end
-until game:GetService("Workspace").dungeon.room3.enemyFolder["Tatsu, Lord of Tides"]
+until not game:GetService("Workspace").dungeon.room2.barrier
 print("GO TO BOSS 1")
 wait(1)
 
