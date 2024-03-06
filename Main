@@ -77,7 +77,8 @@ humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2557.927734375, 8.49997
 AB() wait(2)
 
 hum:MoveTo(Vector3.new(2582.1533203125, 8.49999713897705, -2332.3759765625))
-hum.MoveToFinished:wait()
+hum.MoveToFinished:wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2545.8193359375, 8.499999046325684, -2437.48193359375))
 cooldown() AB()
 
 repeat wait(1)
