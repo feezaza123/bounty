@@ -89,7 +89,7 @@ repeat wait()
             AB()
         end
     end
-until not game:GetService("Workspace").dungeon.room2.barrier
+until not game:GetService("Workspace").dungeon.room2:FindFirstChild("barrier")
 print("GO TO BOSS 1")
 wait(1)
 
