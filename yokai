@@ -1,4 +1,3 @@
---Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -25,6 +24,7 @@ local function AB()
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) 
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
 end
+
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 27
 
 hum:MoveTo(Vector3.new(2825.901123046875, 31.3199462890625, -2076.94287109375))
@@ -34,6 +34,7 @@ AB() wait(6.2) AB() wait(6.2)
 
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2757.670166015625, 25.537174224853516, -2150.4599609375)) wait(0.2)
 AB() wait(6.2) AB() wait(1.5)
+--END1
 
 hum:MoveTo(Vector3.new(2680.24267578125, 25.2968692779541, -2193.901123046875))
 hum.MoveToFinished:wait(1)
@@ -44,6 +45,7 @@ hum:MoveTo(Vector3.new(2630.94970703125, 25.453168869018555, -2159.25390625))
 hum.MoveToFinished:wait()
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2583.410888671875, 8.49999713897705, -2311.311767578125)) wait(0.2)
 AB() wait(6.2) AB() wait(1)
+--END2
 
 hum:MoveTo(Vector3.new(2639.450927734375, 25.199995040893555, -2166.744140625))
 hum.MoveToFinished:wait()
@@ -55,54 +57,9 @@ hum.MoveToFinished:wait(1.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2568.385986328125, 8.49999713897705, -2476.275390625)) wait(0.2)
 AB() wait(6.2) AB() wait(1)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2530.429931640625, 8.49999713897705, -2510.44091796875)) wait(6.2)
-AB() wait(6.2) AB() wait(1)
+AB() wait(6.2) AB() wait(1.5)
 
-hum:MoveTo(Vector3.new(2551.9599609375, 17.0023136138916, -2600.53369140625))
-hum.MoveToFinished:wait(2)
+hum:MoveTo(Vector3.new(2598.33740234375, 8.49999713897705, -2259.34521484375))
+hum.MoveToFinished:wait(4)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2530.429931640625, 8.49999713897705, -2510.44091796875)) wait(1)
 AB()
-
-hum:MoveTo(Vector3.new(2551.740234375, 37.7113151550293, -2668.7626953125))
-hum.MoveToFinished:wait()
-
-hum:MoveTo(Vector3.new(2520.20166015625, 37.94798278808594, -2699.5341796875))
-hum.MoveToFinished:wait()
-wait(3)
-
-repeat
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2512.81298828125, 84.6528091430664, -2701.54150390625)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2549.36328125, 37.519535064697266, -2728.2177734375))
-AB()
-wait(0.5)
-until game:GetService("Workspace").dungeon.room3.enemyFolder["Tatsu, Lord of Tides"].Humanoid.Health <= 0
-
-hum:MoveTo(Vector3.new(2518.37060546875, 38.36859130859375, -2701.249267578125))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2509.49169921875, 37.519535064697266, -2733.11279296875))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2426.855224609375, 62.395484924316406, -2735.4775390625))
-hum.MoveToFinished:wait()
-
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2283.9248046875, 62.39999008178711, -2746.552001953125)) wait(0.5)
-AB() wait(2.5)
-
-hum:MoveTo(Vector3.new(2570.197509765625, 37.519535064697266, -2730.93701171875))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2426.855224609375, 62.395484924316406, -2735.4775390625))
-hum.MoveToFinished:wait()
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2283.9248046875, 62.39999008178711, -2746.552001953125)) wait(2.5)
-AB() wait(2.5)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
