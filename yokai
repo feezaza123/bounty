@@ -27,8 +27,8 @@ game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
 end
 
 local function cooldown()
-repeat wait()
-until game:GetService("Players").LocalPlayer.Backpack["Void Dragon"].cooldown <= 0
+    repeat wait()
+    until game:GetService("Players").LocalPlayer.Backpack["Void Dragon"].cooldown.Value <= 0
 end
 
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 27
@@ -71,4 +71,3 @@ AB() wait(2)
 hum:MoveTo(Vector3.new(2582.1533203125, 8.49999713897705, -2332.3759765625))
 hum.MoveToFinished:wait()
 cooldown() AB()
-
