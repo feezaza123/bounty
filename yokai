@@ -1,4 +1,4 @@
---Yokai
+
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -115,9 +115,7 @@ repeat wait()
 checkmob()
 until not game:GetService("Workspace").dungeon.room3:FindFirstChild("barrier")
 wait(1.5)
-hum:MoveTo(Vector3.new(2532.10986328125, 37.519535064697266, -2728.760009765625))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2446.9169921875, 61.05729675292969, -2733.94091796875))
+hum:MoveTo(Vector3.new(2462.894775390625, 49.84295654296875, -2733.98291015625))
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(2376.732421875, 62.33705139160156, -2740.12939453125))
 hum.MoveToFinished:wait()
