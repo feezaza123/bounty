@@ -1,3 +1,4 @@
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -26,12 +27,12 @@ game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
 end
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 27
 
-hum:MoveTo(Vector3.new(2796.95166015625, 30.7031192779541, -2099.792236328125))
+hum:MoveTo(Vector3.new(2825.901123046875, 31.3199462890625, -2076.94287109375))
 hum.MoveToFinished:wait(0.5)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2729.826171875, 25.295387268066406, -2133.94189453125)) wait(0.2)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2742.990966796875, 25.584110260009766, -2130.702392578125)) wait(0.2)
 AB() wait(6.2) AB() wait(6.2)
 
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2747.858642578125, 25.2968692779541, -2159.623046875)) wait(0.2)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2757.670166015625, 25.537174224853516, -2150.4599609375)) wait(0.2)
 AB() wait(6.2) AB() wait(1.5)
 
 hum:MoveTo(Vector3.new(2680.24267578125, 25.2968692779541, -2193.901123046875))
@@ -90,3 +91,18 @@ hum:MoveTo(Vector3.new(2426.855224609375, 62.395484924316406, -2735.4775390625))
 hum.MoveToFinished:wait()
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2283.9248046875, 62.39999008178711, -2746.552001953125)) wait(2.5)
 AB() wait(2.5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
