@@ -34,7 +34,7 @@ end
 local function checkmob()
     for i,v in pairs(game:GetService("Workspace").dungeon:GetDescendants()) do
         if v.ClassName == "Model" and v.Parent.Name == "enemyFolder" then
-            humrp.CFrame = CFrame.lookAt(humrp.Position, v.HumanoidRootPart.Position)
+            humrp.CFrame = CFrame.lookAt(humrp.Position, v.Head.Position)
             AB()
         end
     end
@@ -83,8 +83,12 @@ humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2560.48193359375, 8.499
 cooldown() AB()
 
 repeat wait()
-checkmob()
-AB()
+    for i,v in pairs(game:GetService("Workspace").dungeon:GetDescendants()) do
+        if v.ClassName == "Model" and v.Parent.Name == "enemyFolder" then
+            humrp.CFrame = CFrame.lookAt(humrp.Position, v.Head.Position)
+            AB()
+        end
+    end
 until game:GetService("Workspace").dungeon.room3.enemyFolder["Tatsu, Lord of Tides"].Humanoid.Health >= 0
 print("GO TO BOSS 1")
 wait(1)
