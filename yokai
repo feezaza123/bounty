@@ -32,7 +32,7 @@ local function cooldown()
 end
 
 local function checkmob()
-    for i,v in pairs(game:GetService("Workspace").dungeon.room2.enemyFolder:GetDescendants()) do
+    for i,v in pairs(game:GetService("Workspace").dungeon:GetDescendants()) do
         if v.ClassName == "Model" and v.Parent.Name == "enemyFolder" then
             humrp.CFrame = CFrame.lookAt(humrp.Position, v.HumanoidRootPart.Position)
         end
@@ -84,8 +84,3 @@ repeat wait()
 checkmob()
 AB()
 until not game:GetService("Workspace").dungeon.room2.Part
-
-
-
-
-
