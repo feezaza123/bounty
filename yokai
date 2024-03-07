@@ -1,4 +1,4 @@
-  --Yokai
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -111,7 +111,7 @@ hum:MoveTo(Vector3.new(2458.8876953125, 67.83324432373047, -2692.809814453125))
 hum.MoveToFinished:wait(2.5)
 hum:MoveTo(Vector3.new(2466.730712890625, 73.92394256591797, -2705.623046875))
 hum.MoveToFinished:wait()
-wait(23)
+wait(21.5)
 repeat wait()
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2544.363037109375, 37.519535064697266, -2722.644775390625)) wait(1)
 AB()
@@ -136,7 +136,7 @@ hum:MoveTo(Vector3.new(2193.76220703125, 86.6324462890625, -2743.18701171875))
 hum.MoveToFinished:wait(0.5)
 hum:MoveTo(Vector3.new(2151.9013671875, 113.2391128540039, -2739.031494140625)) --***
 hum.MoveToFinished:wait(0.5)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2070.244384765625, 117.4999771118164, -2757.641357421875)) wait(1)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2070.244384765625, 117.4999771118164, -2757.641357421875))
 cooldown() wait(0.5) AB() wait(1)
 hum:MoveTo(Vector3.new(2012.200439453125, 144.59429931640625, -2742.510986328125))
 hum.MoveToFinished:wait(0.5)
@@ -189,7 +189,7 @@ end
 until not game.Workspace:FindFirstChild("ring")
 end
 
-repeat wait(1)
+repeat wait()
 AB()
 humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty").HumanoidRootPart.Position)
 boss2()
@@ -203,4 +203,3 @@ humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1897.9849853515625, 228
 AB() cooldown() wait(0.5) AB()
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1902.4705810546875, 228.199951171875, -3186.014892578125)) wait(1)
 cooldown() wait(0.5) AB() cooldown() wait(0.5) AB()
-
