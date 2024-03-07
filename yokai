@@ -186,7 +186,7 @@ else
     local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
     {CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)}):Play()
 end
-until game.Players.LocalPlayer.Character.HumanoidRootPart == CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375) or not game:GetService("Workspace").dungeon.room6:FindFirstChild("barrier")
+until not game.Workspace:FindFirstChild("ring")
 end
 
 repeat wait(1)
