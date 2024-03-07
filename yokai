@@ -125,7 +125,7 @@ repeat wait()
     AB()
 until not game:GetService("Workspace").dungeon.room4:FindFirstChild("barrier")
 
-hum:MoveTo(Vector3.new(2159.78466796875, 109.83642578125, -2748.05224609375)) --***
+hum:MoveTo(Vector3.new(2166.6220703125, 105.555419921875, -2748.7802734375)) --***
 hum.MoveToFinished:wait()
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2078.006103515625, 117.43397521972656, -2730.88623046875))
 cooldown() wait(0.5) AB() wait(1.8)
