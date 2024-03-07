@@ -174,16 +174,18 @@ hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(1910.023193359375, 224.01171875, -2878.01318359375))
 hum.MoveToFinished:wait()
 wait(0.2)
-repeat wait(0.5)
+repeat wait()
+if game.Workspace:FindFirstChild("ring") then
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = game.Workspace.ring.CFrame}):Play()
+else
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = game.Workspace.ring.CFrame}):Play()
     humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder["Sangor, the Bloodthirsty"].HumanoidRootPart.Position)
-    wait(0.5)
     AB()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)
-    if game.Workspace:FindFirstChild("ring") then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1911.17626953125, 228.199951171875, -2918.841064453125)
-    wait(0.5)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.ring.CFrame
-    end
+end
 until not game:GetService("Workspace").dungeon.room6:FindFirstChild("barrier")
 wait(2)
 hum:MoveTo(Vector3.new(1913.2200927734375, 228.42137145996094, -3027.838134765625))
