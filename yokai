@@ -190,7 +190,7 @@ until game.Players.LocalPlayer.Character.HumanoidRootPart == CFrame.new(1910.023
 end
 
 
-repeat wait()
+repeat wait(1)
 AB()
 humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder["Sangor, the Bloodthirsty"].HumanoidRootPart.Position)
 boss2()
