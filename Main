@@ -2,16 +2,21 @@ repeat wait() until game:IsLoaded()
 wait(2)
 game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
 local hum = game.Players.LocalPlayer.Character.Humanoid
-
---Yokai
-
-local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
-local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
 local args1 = {
     [1] = {
         [1] = {
-@@ -20,154 +21,122 @@ local args2 = {
+            ["\28"] = skill[1]
+        },
+        [2] = "*"
+    }
+}
+
+local args2 = {
+    [1] = {
+        [1] = {
+            ["\28"] = skill[2]
+        },
         [2] = "*"
     }
 }
@@ -38,7 +43,6 @@ local args3 = {
 local function AB()
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) 
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2)) 
-game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
 end
 
 local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -91,10 +95,6 @@ humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(422.22119140625, -58.45
 AB() wait(5.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(438.0868835449219, -58.45048141479492, 169.5250244140625)) wait(2)
 AB() wait(4)
-local function cooldown()
-    repeat wait()
-    until game:GetService("Players").LocalPlayer.Backpack["Void Dragon"].cooldown.Value <= 0
-end
 
 hum:MoveTo(Vector3.new(478.6464538574219, -58.45048141479492, 202.57998657226562))
 hum.MoveToFinished:wait(0.5)
@@ -102,20 +102,11 @@ humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(489.4344482421875, -58.
 AB() wait(4)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(529.9732666015625, -58.45115280151367, 149.5105743408203)) wait(3)
 AB() wait(4)
-local function checkmob()
-    for i,v in pairs(game:GetService("Workspace").dungeon:GetDescendants()) do
-        if v.ClassName == "Model" and v.Parent.Name == "enemyFolder" and v.PrimaryPart ~= "DRAGON" and v.DataCost ~= 1863 then
-            humrp.CFrame = CFrame.lookAt(humrp.Position, v:WaitForChild("Head").Position)
-            AB()
-        end
-    end
-end
 
 hum:MoveTo(Vector3.new(526.687744140625, -58.45143127441406, 147.37139892578125))
 hum.MoveToFinished:wait(0.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(510.4998474121094, -58.45103073120117, 133.64599609375)) wait(2)
 AB() wait(1)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 27
 
 hum:MoveTo(Vector3.new(366.53253173828125, -58.451019287109375, 35.68464279174805))
 hum.MoveToFinished:wait(0.5)
@@ -124,46 +115,16 @@ hum.MoveToFinished:wait(0.5)
 hum:MoveTo(Vector3.new(557.8267822265625, -3.1322073936462402, 22.04058837890625))
 hum.MoveToFinished:wait(0.5)
 hum:MoveTo(Vector3.new(604.7590942382812, 16.645145416259766, 94.58983612060547))
-hum:MoveTo(Vector3.new(2825.901123046875, 31.3199462890625, -2076.94287109375))
 hum.MoveToFinished:wait(0.5)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2742.990966796875, 25.584110260009766, -2130.702392578125)) wait(0.2)
-AB() wait(6.2) AB() wait(6.2)
 
 hum:MoveTo(Vector3.new(638.4157104492188, 17.298742294311523, 106.26364135742188))
 hum.MoveToFinished:wait(0.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(733.0051879882812, 16.6900691986084, 73.51078033447266)) wait(1)
 AB() wait(5)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2757.670166015625, 25.537174224853516, -2150.4599609375)) wait(0.2)
-AB() wait(6.2) AB() wait(1.5)
---END1
 
 hum:MoveTo(Vector3.new(631.0394897460938, 17.03561782836914, 72.05393981933594))
 hum.MoveToFinished:wait(0.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(735.00048828125, 17.28742218017578, 36.16952896118164)) wait(1)
-hum:MoveTo(Vector3.new(2680.24267578125, 25.2968692779541, -2193.901123046875))
-hum.MoveToFinished:wait(1)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2626.372314453125, 8.49999713897705, -2220.084716796875)) wait(0.2)
-AB() wait(6.2) AB() wait(5.5)
-
-hum:MoveTo(Vector3.new(2630.94970703125, 25.453168869018555, -2159.25390625))
-hum.MoveToFinished:wait()
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2583.410888671875, 8.49999713897705, -2311.311767578125)) wait(0.2)
-AB() wait(6.2) AB() wait(1)
---END2
-
-hum:MoveTo(Vector3.new(2639.450927734375, 25.199995040893555, -2166.744140625))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2609.8720703125, 8.49999713897705, -2195.320556640625))
-hum.MoveToFinished:wait()
-
-hum:MoveTo(Vector3.new(2584.614501953125, 8.49999713897705, -2329.915771484375))
-hum.MoveToFinished:wait(1.5)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2568.385986328125, 8.49999713897705, -2476.275390625)) wait(0.2)
-AB() wait(6.2) AB() wait(1)
-
-hum:MoveTo(Vector3.new(2598.33740234375, 8.49999713897705, -2259.34521484375))
-hum.MoveToFinished:wait(2)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2557.927734375, 8.499979972839355, -2400.92431640625)) wait(3)
 AB() wait(2)
 
 hum:MoveTo(Vector3.new(820.9893798828125, 21.719247817993164, 22.22835350036621))
@@ -173,69 +134,9 @@ hum:MoveTo(Vector3.new(820.9893798828125, 21.719247817993164, 22.22835350036621)
 hum.MoveToFinished:wait(0.5)
 
 hum:MoveTo(Vector3.new(879.9227905273438, 47.94123840332031, 4.450686454772949))
-hum:MoveTo(Vector3.new(2582.1533203125, 8.49999713897705, -2332.3759765625))
-hum.MoveToFinished:wait(0.5)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2560.48193359375, 8.499996185302734, -2399.3984375))
-cooldown() AB()
-
-repeat wait()
-checkmob()
-until not game:GetService("Workspace").dungeon.room2:FindFirstChild("barrier")
-print("GO TO BOSS 1")
-wait(1)
-
-hum:MoveTo(Vector3.new(2571.136474609375, 8.499999046325684, -2396.859619140625))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2567.0400390625, 8.499999046325684, -2454.520263671875))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2559.907958984375, 8.499999046325684, -2550.47900390625))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2555.57421875, 13.17492389678955, -2595.22998046875))
-hum.MoveToFinished:wait()
-AB() wait(2)
-hum:MoveTo(Vector3.new(2553.1806640625, 37.980628967285156, -2649.1640625))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2475.210205078125, 36.940277099609375, -2652.174560546875))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2474.02197265625, 38.772010803222656, -2666.67138671875))
-hum.MoveToFinished:wait(0.5)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2467.0009765625, 57.72879409790039, -2665.62744140625)
-wait(1.5)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2459.69873046875, 67.77457427978516, -2670.528564453125)
-wait(1)
-hum:MoveTo(Vector3.new(2458.8876953125, 67.83324432373047, -2692.809814453125))
-hum.MoveToFinished:wait(2.5)
-hum:MoveTo(Vector3.new(2466.730712890625, 73.92394256591797, -2705.623046875))
-hum.MoveToFinished:wait(0.5)
-repeat wait()
-checkmob()
-until not game:GetService("Workspace").dungeon.room3:FindFirstChild("barrier")
-wait(1.5)
-hum:MoveTo(Vector3.new(2462.894775390625, 49.84295654296875, -2733.98291015625))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2376.732421875, 62.33705139160156, -2740.12939453125))
-hum.MoveToFinished:wait()
-AB() wait(2.5)
-hum:MoveTo(Vector3.new(2388.6474609375, 62.50971984863281, -2744.741943359375))
-hum.MoveToFinished:wait()
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2319.033935546875, 62.393184661865234, -2747.30908203125))
-wait(0.5) cooldown() AB() wait(2)
-hum:MoveTo(Vector3.new(2223.427490234375, 65.27999114990234, -2749.312255859375))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2152.7001953125, 112.90437316894531, -2746.5615234375))
-hum.MoveToFinished:wait()
-cooldown() wait(0.5) AB() wait(2.2)
-hum:MoveTo(Vector3.new(2192.436279296875, 87.85465240478516, -2753.866455078125))
-hum.MoveToFinished:wait(1)
-hum:MoveTo(Vector3.new(2388.6474609375, 62.50971984863281, -2744.741943359375))
 hum.MoveToFinished:wait(0.5)
 
 hum:MoveTo(Vector3.new(919.7042236328125, 66.04268646240234, -10.56348991394043))
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2319.033935546875, 62.393184661865234, -2747.30908203125))
-cooldown() wait(0.5) AB() wait(1.5)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2074.508056640625, 117.19998168945312, -2769.6728515625))
-cooldown() wait(0.5) AB()
-hum:MoveTo(Vector3.new(2036.0948486328125, 126.8880615234375, -2741.58251953125))
 hum.MoveToFinished:wait(0.5)
 AB()
 wait(4)
