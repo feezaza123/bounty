@@ -1,4 +1,4 @@
---Yokai
+ --Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -174,7 +174,9 @@ hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(1910.023193359375, 224.01171875, -2878.01318359375))
 hum.MoveToFinished:wait()
 wait(0.2)
-repeat wait()
+
+local function boss2()
+repeat wait(0.5)
 if game.Workspace:FindFirstChild("ring") then
     local TweenService = game:GetService("TweenService")
     local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
@@ -182,10 +184,16 @@ if game.Workspace:FindFirstChild("ring") then
 else
     local TweenService = game:GetService("TweenService")
     local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-    {CFrame = game.Workspace.ring.CFrame}):Play()
-    humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder["Sangor, the Bloodthirsty"].HumanoidRootPart.Position)
-    AB()
+    {CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)}):Play()
 end
+until not game.Players.LocalPlayer.Character.HumanoidRootPart == CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)
+end
+
+
+repeat wait()
+AB()
+humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder["Sangor, the Bloodthirsty"].HumanoidRootPart.Position)
+boss2()
 until not game:GetService("Workspace").dungeon.room6:FindFirstChild("barrier")
 wait(2)
 hum:MoveTo(Vector3.new(1913.2200927734375, 228.42137145996094, -3027.838134765625))
