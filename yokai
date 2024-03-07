@@ -182,6 +182,7 @@ repeat wait(0.5)
     AB()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)
     if game.Workspace:FindFirstChild("ring") then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1911.17626953125, 228.199951171875, -2918.841064453125)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.ring.CFrame
     end
 until not game:GetService("Workspace").dungeon.room6:FindFirstChild("barrier")
