@@ -175,13 +175,13 @@ hum:MoveTo(Vector3.new(1907.3919677734375, 195.9466094970703, -2838.8740234375))
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(1910.023193359375, 224.01171875, -2878.01318359375))
 hum.MoveToFinished:wait()
-wait(0.5)
-repeat wait(1)
+wait(0.2)
+repeat wait(0.5)
     humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder["Sangor, the Bloodthirsty"].HumanoidRootPart.Position)
     wait(0.5)
     AB()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)
     if game.Workspace:FindFirstChild("ring") then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.ring.CFrame
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)
     end
 until not game:GetService("Workspace").dungeon.room6:FindFirstChild("barrier")
