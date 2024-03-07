@@ -143,10 +143,18 @@ cooldown() wait(0.5) AB() wait(1)
 hum:MoveTo(Vector3.new(2012.200439453125, 144.59429931640625, -2742.510986328125))
 hum.MoveToFinished:wait(0.5)
 
+---GO TO MOB 2 BOSS
+
 hum:MoveTo(Vector3.new(1984.6195068359375, 163.19943237304688, -2748.2392578125))
 hum.MoveToFinished:wait(0.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1934.9102783203125, 172.797119140625, -2709.015380859375)) wait(1)
-cooldown() wait(0.5) AB() wait(0.5) cooldown() wait(0.5) AB()
+cooldown() AB() wait(1.5)
+hum:MoveTo(Vector3.new(2012.200439453125, 144.59429931640625, -2742.510986328125))
+hum.MoveToFinished:wait(1)
+hum:MoveTo(Vector3.new(1984.6195068359375, 163.19943237304688, -2748.2392578125))
+hum.MoveToFinished:wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1934.9102783203125, 172.797119140625, -2709.015380859375)) wait(0.5)
+cooldown() AB()
 
 hum:MoveTo(Vector3.new(1957.6968994140625, 172.0328369140625, -2752.909423828125))
 hum.MoveToFinished:wait()
