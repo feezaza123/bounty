@@ -1,4 +1,4 @@
---Yokai
+  --Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -191,7 +191,7 @@ end
 
 repeat wait(1)
 AB()
-humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder["Sangor, the Bloodthirsty"].HumanoidRootPart.Position)
+humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty").HumanoidRootPart.Position)
 boss2()
 until not game:GetService("Workspace").dungeon.room6:FindFirstChild("barrier")
 wait(2)
@@ -203,3 +203,4 @@ humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1897.9849853515625, 228
 AB() cooldown() wait(0.5) AB()
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1902.4705810546875, 228.199951171875, -3186.014892578125)) wait(1)
 cooldown() wait(0.5) AB() cooldown() wait(0.5) AB()
+
