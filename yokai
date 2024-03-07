@@ -166,8 +166,21 @@ hum:MoveTo(Vector3.new(1938.952392578125, 173.0401611328125, -2682.687255859375)
 hum.MoveToFinished:wait(0.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1890.58544921875, 172.79995727539062, -2759.108642578125)) wait(1)
 cooldown() AB()
-
---
-
 hum:MoveTo(Vector3.new(1905.6041259765625, 172.79995727539062, -2796.180908203125))
 hum.MoveToFinished:wait(0.5)
+
+--BOSS3
+
+hum:MoveTo(Vector3.new(1907.3919677734375, 195.9466094970703, -2838.8740234375))
+hum.MoveToFinished:wait()
+hum:MoveTo(Vector3.new(1910.023193359375, 224.01171875, -2878.01318359375))
+hum.MoveToFinished:wait()
+wait(0.5)
+repeat wait(1)
+    humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder["Sangor, the Bloodthirsty"].HumanoidRootPart.Position)
+    wait(0.5)
+    AB()
+    if game.Workspace:FindFirstChild("ring") then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.ring.CFrame
+    end
+until not game:GetService("Workspace").dungeon.room6:FindFirstChild("barrier")
