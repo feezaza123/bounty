@@ -1,4 +1,4 @@
-    --Yokai
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -158,7 +158,7 @@ hum:MoveTo(Vector3.new(1957.6968994140625, 172.0328369140625, -2752.909423828125
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(1924.1590576171875, 172.7986297607422, -2709.3837890625))
 hum.MoveToFinished:wait()
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1877.3804931640625, 172.79937744140625, -2778.019775390625)) wait(1)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1882.07666015625, 172.79995727539062, -2770.78271484375)) wait(1)
 cooldown() AB()
 hum:MoveTo(Vector3.new(1938.952392578125, 173.0401611328125, -2682.687255859375))
 hum.MoveToFinished:wait(0.5)
@@ -200,6 +200,6 @@ hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(1913.4471435546875, 240.27456665039062, -3082.06689453125))
 hum.MoveToFinished:wait()
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1897.9849853515625, 228.14581298828125, -3217.3798828125)) wait(1)
-AB() cooldown() AB()
+AB() cooldown() wait(0.5) AB()
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1902.4705810546875, 228.199951171875, -3186.014892578125)) wait(1)
-cooldown() AB() cooldown() AB()
+cooldown() wait(0.5) AB() cooldown() wait(0.5) AB()
