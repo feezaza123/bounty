@@ -131,7 +131,7 @@ hum.MoveToFinished:wait(0.5)
 hum:MoveTo(Vector3.new(2151.9013671875, 113.2391128540039, -2739.031494140625)) --***
 hum.MoveToFinished:wait(0.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2073.755615234375, 117.28099822998047, -2728.67529296875)) wait(1)
-AB() wait(2.5) 
+AB() wait(3.2) 
 hum:MoveTo(Vector3.new(2193.76220703125, 86.6324462890625, -2743.18701171875))
 hum.MoveToFinished:wait(0.5)
 hum:MoveTo(Vector3.new(2151.9013671875, 113.2391128540039, -2739.031494140625)) --***
