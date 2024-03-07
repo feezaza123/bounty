@@ -183,6 +183,16 @@ repeat wait(0.5)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)
     if game.Workspace:FindFirstChild("ring") then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1911.17626953125, 228.199951171875, -2918.841064453125)
+    wait(0.5)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.ring.CFrame
     end
 until not game:GetService("Workspace").dungeon.room6:FindFirstChild("barrier")
+
+hum:MoveTo(Vector3.new(1913.2200927734375, 228.42137145996094, -3027.838134765625))
+hum.MoveToFinished:wait()
+hum:MoveTo(Vector3.new(1913.4471435546875, 240.27456665039062, -3082.06689453125))
+hum.MoveToFinished:wait()
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1946.3436279296875, 228.0937042236328, -3178.1591796875)) wait(0.5)
+AB() cooldown() AB()
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1902.4705810546875, 228.199951171875, -3186.014892578125)) wait(0.5)
+cooldown() AB() cooldown() AB()
