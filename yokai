@@ -1,4 +1,4 @@
---Yokaisd
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -121,7 +121,6 @@ hum:MoveTo(Vector3.new(2462.894775390625, 49.84295654296875, -2733.98291015625))
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(2376.732421875, 62.33705139160156, -2740.12939453125))
 hum.MoveToFinished:wait()
-AB() wait(1.8) cooldown() wait(0.5) AB() wait(1.5)
 repeat wait()
     AB()
 until not game:GetService("Workspace").dungeon.room4:FindFirstChild("barrier")
@@ -217,7 +216,8 @@ humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1902.5615234375, 228.18
 AB() wait(6.2) AB() wait(2)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1961.606689453125, 228.0937042236328, -3302.35205078125)) wait(0.5)
 cooldown() wait(0.5) AB() wait(6.2) AB() wait(1)
-
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1940.0174560546875, 228.199951171875, -3173.1845703125)) wait(0.5)
+cooldown() wait(0.5) AB() wait(0.5) cooldown() AB() wait(1)
 
 hum:MoveTo(Vector3.new(1915.3919677734375, 240.27456665039062, -3107.681396484375))
 hum.MoveToFinished:wait()
