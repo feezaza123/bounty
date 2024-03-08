@@ -1,4 +1,4 @@
---Yokai
+--Yokaiss
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -193,7 +193,7 @@ pcall(function()
     humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty").HumanoidRootPart.Position)
 end)
 boss2()
-if (humrp.Position - Vector3.new(1910.023193359375, 224.01171875, -2878.01318359375)).Magnitude <= 1.5 and not game.Workspace:FindFirstChild("ring") then
+if (humrp.Position - Vector3.new(1910.023193359375, 224.01171875, -2878.01318359375)).Magnitude <= 3 and not game.Workspace:FindFirstChild("ring") then
     humrp.CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)
 end
 until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
@@ -218,3 +218,14 @@ hum:MoveTo(Vector3.new(1895.3963623046875, 228.0937042236328, -3228.079833984375
 hum.MoveToFinished:wait()
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1954.9327392578125, 228.10244750976562, -3363.670654296875)) wait(0.5)
 cooldown() wait(0.5) AB() wait(6.2) AB()
+
+hum:MoveTo(Vector3.new(1926.88671875, 228.1217803955078, -3246.14306640625))
+hum.MoveToFinished:wait()
+hum:MoveTo(Vector3.new(1958.3648681640625, 228.0937042236328, -3278.1640625))
+hum.MoveToFinished:wait()
+hum:MoveTo(Vector3.new(1975.78955078125, 228.0937042236328, -3297.52490234375))
+hum.MoveToFinished:wait()
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2022.041259765625, 228.14788818359375, -3400.244384765625)) wait(0.5)
+cooldown() wait(0.5) AB() wait(6.2) AB() wait(6.2)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2020.103271484375, 228.0937042236328, -3440.030029296875)) wait(0.5)
+AB() wait(6.2) AB()
