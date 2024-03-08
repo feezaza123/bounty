@@ -1,4 +1,4 @@
---Yokaijkl
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -136,9 +136,9 @@ hum:MoveTo(Vector3.new(2193.76220703125, 86.6324462890625, -2743.18701171875))
 hum.MoveToFinished:wait(0.5)
 hum:MoveTo(Vector3.new(2151.9013671875, 113.2391128540039, -2739.031494140625)) --***
 hum.MoveToFinished:wait(0.5)
-hum:MoveTo(Vector3.new(2108.489501953125, 117.74224090576172, -2691.688232421875)) --***
-hum.MoveToFinished:wait(0.5)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2067.904296875, 117.4999771118164, -2753.4580078125))
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2073.755615234375, 117.28099822998047, -2728.67529296875)) wait(0.5)
+cooldown() wait(0.5) AB() wait(1)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2074.71484375, 117.19998168945312, -2767.021484375)) wait(0.5)
 cooldown() wait(0.5) AB() wait(1)
 hum:MoveTo(Vector3.new(2012.200439453125, 144.59429931640625, -2742.510986328125))
 hum.MoveToFinished:wait(0.5)
@@ -202,7 +202,7 @@ pcall(function()
 end)
 boss2()
 until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
-wait(3)
+wait(4.5)
 hum:MoveTo(Vector3.new(1913.2200927734375, 228.42137145996094, -3027.838134765625))
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(1913.4471435546875, 240.27456665039062, -3082.06689453125))
