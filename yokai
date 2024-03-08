@@ -189,9 +189,14 @@ end
 
 repeat wait()
 AB()
-humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty").HumanoidRootPart.Position)
+pcall(function()
+    humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty").HumanoidRootPart.Position)
+end)
 boss2()
-until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty")
+if (humrp.Position - Vector3.new(1910.023193359375, 224.01171875, -2878.01318359375)).Magnitude <= 1.5 and not game.Workspace:FindFirstChild("ring") then
+    humrp.CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)
+end
+until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
 wait(2)
 hum:MoveTo(Vector3.new(1913.2200927734375, 228.42137145996094, -3027.838134765625))
 hum.MoveToFinished:wait()
