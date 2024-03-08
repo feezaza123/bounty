@@ -249,5 +249,13 @@ repeat wait()
             humrp.CFrame = CFrame.lookAt(humrp.Position, v.HumanoidRootPart.Position)
         end
     end
+    wait(0.5)
     AB()
 until not game:GetService("Workspace").dungeon.room7:FindFirstChild("barrier")
+wait(1)
+humrp.CFrame = CFrame.new(2080.57763671875, 242.546142578125, -3394.4873046875) wait(0.5)
+cooldown() wait(0.2) AB() wait(6.2) AB() wait(6.2) AB() wait(2)
+hum:MoveTo(Vector3.new(2110.225830078125, 243.99668884277344, -3402.060302734375))
+hum.MoveToFinished:wait()
+humrp.CFrame = CFrame.new(2118.60546875, 244.19439697265625, -3405.583251953125) wait(0.5)
+cooldown() wait(0.2) AB() wait(6.2) AB() wait(6.2) AB()
