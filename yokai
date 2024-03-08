@@ -1,4 +1,4 @@
---Yokai
+--Yokaiddd
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -180,7 +180,7 @@ spawn(function()
 repeat wait(2.5)
     if game.Workspace:FindFirstChild("ring") then
         local TweenService = game:GetService("TweenService")
-        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1.2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
         {CFrame = game.Workspace.ring.CFrame}):Play()
         wait(1)
         local TweenService = game:GetService("TweenService")
@@ -243,11 +243,11 @@ hum.MoveToFinished:wait() wait(0.5)
 humrp.CFrame = CFrame.new(2051.140625, 246.4320831298828, -3352.306396484375)
 hum:MoveTo(Vector3.new(2068.271240234375, 242.6526641845703, -3386.731689453125))
 hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2079.49951171875, 244.4994659423828, -3381.160400390625))
-hum.MoveToFinished:wait() wait()
-
-hum:MoveTo(Vector3.new(2153.29736328125, 248.84231567382812, -3395.251953125))
-hum.MoveToFinished:wait() wait()
-
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2155.548828125, 247.8067626953125, -3403.281494140625)) wait(0.5)
-AB() wait(6.2) AB() wait(6.2)
+repeat wait()
+    for i,v in pairs(game:GetService("Workspace").dungeon.room7.enemyFolder:GetChildren()) do
+        if v.ClassName == "Model" then
+            humrp.CFrame = CFrame.lookAt(humrp.Position, v.HumanoidRootPart.Position)
+        end
+    end
+    AB()
+until not game:GetService("Workspace").dungeon.room7:FindFirstChild("barrier")
