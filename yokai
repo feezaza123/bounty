@@ -1,4 +1,4 @@
---Yokaidd
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -40,7 +40,7 @@ local function checkmob()
     end
 end
 
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 27
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 28
 
 hum:MoveTo(Vector3.new(2825.901123046875, 31.3199462890625, -2076.94287109375))
 hum.MoveToFinished:wait(1)
@@ -177,7 +177,7 @@ hum.MoveToFinished:wait()
 wait(0.2)
 
 spawn(function()
-repeat wait(1.5)
+repeat wait(2.5)
     if game.Workspace:FindFirstChild("ring") then
         local TweenService = game:GetService("TweenService")
         local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
@@ -228,7 +228,7 @@ hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(1895.3963623046875, 228.0937042236328, -3228.079833984375))
 hum.MoveToFinished:wait()
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1954.9327392578125, 228.10244750976562, -3363.670654296875)) wait(0.5)
-cooldown() wait(0.5) AB() wait(6.2) AB()
+cooldown() wait(0.5) AB() wait(6.2) AB() wait(1)
 
 hum:MoveTo(Vector3.new(1926.88671875, 228.1217803955078, -3246.14306640625))
 hum.MoveToFinished:wait()
@@ -236,7 +236,6 @@ hum:MoveTo(Vector3.new(1958.3648681640625, 228.0937042236328, -3278.1640625))
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(1975.78955078125, 228.0937042236328, -3297.52490234375))
 hum.MoveToFinished:wait()
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2032.177734375, 228.19732666015625, -3403.64453125)) wait(0.5)
-cooldown() wait(0.5) AB() wait(6.2) AB() wait(6.2)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2020.103271484375, 228.0937042236328, -3440.030029296875)) wait(0.5)
-AB() wait(6.2) AB()
+hum:MoveTo(Vector3.new(2021.4017333984375, 231.87002563476562, -3315.667724609375))
+hum.MoveToFinished:wait() wait(1)
+humrp.CFrame = CFrame.new(2024.9998779296875, 252.39878845214844, -3321.63525390625)
