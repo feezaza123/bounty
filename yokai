@@ -1,4 +1,4 @@
---Yokai
+--Yokaid
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
