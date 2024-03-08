@@ -1,4 +1,4 @@
---Yokai
+--Yokaidd
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -192,9 +192,11 @@ end)
 
 spawn(function()
     repeat wait(5)
+        if game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty")  then
         local TweenService = game:GetService("TweenService")
         local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
         {CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)}):Play()
+        end
     until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
 end)
 
