@@ -193,7 +193,7 @@ pcall(function()
     humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty").HumanoidRootPart.Position)
 end)
 boss2()
-if (humrp.Position - Vector3.new(1910.023193359375, 224.01171875, -2878.01318359375)).Magnitude <= 3 and not game.Workspace:FindFirstChild("ring") then
+if (humrp.Position - Vector3.new(1910.023193359375, 224.01171875, -2878.01318359375)).Magnitude <= 5 and not game.Workspace:FindFirstChild("ring") then
     humrp.CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)
 end
 until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
