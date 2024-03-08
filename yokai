@@ -6,18 +6,18 @@ local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
 local args1 = {
     [1] = {
         [1] = {
-            ["\28"] = skill[1]
+            ["\30"] = skill[1]
         },
-        [2] = "*"
+        [2] = ","
     }
 }
 
 local args2 = {
     [1] = {
         [1] = {
-            ["\28"] = skill[2]
+            ["\30"] = skill[2]
         },
-        [2] = "*"
+        [2] = ","
     }
 }
 
@@ -301,18 +301,18 @@ while true do wait()
     local args1 = {
         [1] = {
             [1] = {
-                ["\28"] = skill[1]
+                ["\30"] = skill[1]
             },
-            [2] = "*"
+            [2] = ","
         }
     }
     
     local args2 = {
         [1] = {
             [1] = {
-                ["\28"] = skill[2]
+                ["\30"] = skill[2]
             },
-            [2] = "*"
+            [2] = ","
         }
     }
     local function AB()
