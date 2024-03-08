@@ -1,4 +1,4 @@
---Yokaidd
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -288,8 +288,9 @@ hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(2355.65966796875, 228.199951171875, -3289.366943359375))
 hum.MoveToFinished:wait()
 
-repeat wait()
+while true do wait()
     local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
     humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room9.enemyFolder:FindFirstChild("Commander Leonaru").HumanoidRootPart.Position)
+    wait(0.5)
     AB()
-until not game:GetService("Workspace").dungeon.room9.enemyFolder:FindFirstChild("Commander Leonaru")
+end
