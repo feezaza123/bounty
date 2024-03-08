@@ -180,11 +180,12 @@ repeat wait(1)
 if game.Workspace:FindFirstChild("ring") then
     local TweenService = game:GetService("TweenService")
     local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-    {CFrame = game.Workspace.ring.CFrame}):Play()
+    {CFrame = game.Workspace.ring.CFrame + CFrame.new(0,-5,0)}):Play()
 else
     local TweenService = game:GetService("TweenService")
     local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
     {CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)}):Play()
+    humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty").HumanoidRootPart.Position)
 end
 until not game.Workspace:FindFirstChild("ring")
 end
@@ -200,6 +201,6 @@ hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(1913.4471435546875, 240.27456665039062, -3082.06689453125))
 hum.MoveToFinished:wait()
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1897.9849853515625, 228.14581298828125, -3217.3798828125)) wait(1)
-AB() cooldown() wait(0.5) AB()
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1902.4705810546875, 228.199951171875, -3186.014892578125)) wait(1)
+AB() cooldown() wait(0.5) AB() wait(1)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1902.4705810546875, 228.199951171875, -3186.014892578125)) wait(0.5)
 cooldown() wait(0.5) AB() cooldown() wait(0.5) AB()
