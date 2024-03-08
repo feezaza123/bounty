@@ -180,7 +180,7 @@ if game.Workspace:FindFirstChild("ring") then
     local TweenService = game:GetService("TweenService")
     local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
     {CFrame = game.Workspace.ring.CFrame * CFrame.new(0,-10,0)}):Play()
-    wait(1.2)
+    wait(1)
     local TweenService = game:GetService("TweenService")
     local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
     {CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)}):Play()
