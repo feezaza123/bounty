@@ -294,3 +294,35 @@ while true do wait()
     wait(0.5)
     AB()
 end
+
+
+while true do wait()
+    local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
+    local args1 = {
+        [1] = {
+            [1] = {
+                ["\28"] = skill[1]
+            },
+            [2] = "*"
+        }
+    }
+    
+    local args2 = {
+        [1] = {
+            [1] = {
+                ["\28"] = skill[2]
+            },
+            [2] = "*"
+        }
+    }
+    local function AB()
+        game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) 
+        game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
+    end
+    local Player = game:GetService("Players").LocalPlayer
+    local char = Player.Character or Player.CharacterAdded:Wait()
+    local humrp = char:WaitForChild("HumanoidRootPart")
+    humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room9.enemyFolder:FindFirstChild("Commander Leonaru").HumanoidRootPart.Position)
+    wait(1)
+    AB()
+end
