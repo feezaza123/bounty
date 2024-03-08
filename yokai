@@ -1,4 +1,4 @@
---Yokaid
+--Yokaids
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -194,7 +194,7 @@ spawn(function()
     repeat wait(5)
         if game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty")  then
         local TweenService = game:GetService("TweenService")
-        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0.8, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1.2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
         {CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)}):Play()
         end
     until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
@@ -245,7 +245,7 @@ hum:MoveTo(Vector3.new(2068.271240234375, 242.6526641845703, -3386.731689453125)
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(2079.49951171875, 244.4994659423828, -3381.160400390625))
 hum.MoveToFinished:wait() wait(0.5)
-
-repeat wait()
-    checkmob()
-until not game:GetService("Workspace").dungeon.room7:FindFirstChild("barrier")
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2069.9873046875, 241.6377716064453, -3394.3193359375)) wait(0.5)
+AB() wait(0.5) cooldown() wait(0.5) AB() wait(1)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2059.0537109375, 241.8385009765625, -3386.73779296875)) wait(0.5)
+cooldown() wait(0.5) AB() wait(1) cooldown() wait(0.5) AB() wait(1)
