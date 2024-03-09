@@ -1,4 +1,4 @@
---Yokaidw
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -177,31 +177,7 @@ hum.MoveToFinished:wait()
 wait(0.2)
 
 spawn(function()
-repeat wait(3.5)
-    if game.Workspace:FindFirstChild("ring") then
-        local TweenService = game:GetService("TweenService")
-        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-        {CFrame = game.Workspace.ring.CFrame}):Play()
-        wait(2.5)
-        local TweenService = game:GetService("TweenService")
-        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-        {CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)}):Play()
-    end
-until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
-end)
-
-spawn(function()
-    repeat wait(5)
-        if game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") and not game.Workspace:FindFirstChild("ring")  then
-        local TweenService = game:GetService("TweenService")
-        local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(1.2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-        {CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)}):Play()
-        end
-    until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
-end)
-
-spawn(function()
-    while true do wait(1)
+    while true do wait()
         local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
         local args1 = {
             [1] = {
@@ -231,9 +207,37 @@ spawn(function()
     end
 end)
 
+spawn(function()
+    pcall(function()
+repeat wait(3.5)
+    if game.Workspace:FindFirstChild("ring") then
+        local TweenService = game:GetService("TweenService")
+        local Tw = TweenService:Create(humrp, TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+        {CFrame = game.Workspace.ring.CFrame}):Play()
+        wait(2.5)
+        local TweenService = game:GetService("TweenService")
+        local Tw = TweenService:Create(humrp, TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+        {CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)}):Play()
+    end
+until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
+end)
+end)
+
+spawn(function()
+    pcall(function()
+    repeat wait(3)
+        if game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") and not game.Workspace:FindFirstChild("ring")  then
+        local TweenService = game:GetService("TweenService")
+        local Tw = TweenService:Create(humrp, TweenInfo.new(1.2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+        {CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)}):Play()
+        end
+    until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
+end)
+end)
+
 repeat wait()
-AB()
 pcall(function()
+    AB()
     humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty").HumanoidRootPart.Position)
 end)
 until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
@@ -242,6 +246,32 @@ hum:MoveTo(Vector3.new(1913.2200927734375, 228.42137145996094, -3027.83813476562
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(1913.4471435546875, 240.27456665039062, -3082.06689453125))
 hum.MoveToFinished:wait()
+
+local hum = game.Players.LocalPlayer.Character.Humanoid 
+local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
+local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+local args1 = {
+    [1] = {
+        [1] = {
+            ["\30"] = skill[1]
+        },
+        [2] = ","
+    }
+}
+
+local args2 = {
+    [1] = {
+        [1] = {
+            ["\30"] = skill[2]
+        },
+        [2] = ","
+    }
+}
+
+local function AB()
+game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) 
+game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
+end
 
 hum:MoveTo(Vector3.new(1947.418701171875, 241.01483154296875, -3121.006103515625))
 hum.MoveToFinished:wait()
