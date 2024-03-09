@@ -1,4 +1,4 @@
---Yokaidww
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -201,6 +201,37 @@ spawn(function()
         {CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)}):Play()
         end
     until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
+end)
+
+spawn(function()
+    while true do wait(1)
+        local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
+        local args1 = {
+            [1] = {
+                [1] = {
+                    ["\30"] = skill[1]
+                },
+                [2] = ","
+            }
+        }
+        
+        local args2 = {
+            [1] = {
+                [1] = {
+                    ["\30"] = skill[2]
+                },
+                [2] = ","
+            }
+        }
+        local function AB()
+            game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) 
+            game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
+        end
+        local Player = game:GetService("Players").LocalPlayer
+        local char = Player.Character or Player.CharacterAdded:Wait()
+        local humrp = char:WaitForChild("HumanoidRootPart")
+        local hum = char:WaitForChild("Humanoid")
+    end
 end)
 
 repeat wait()
