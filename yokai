@@ -209,14 +209,14 @@ end)
 
 spawn(function()
     pcall(function()
-repeat wait(3.5)
+repeat wait(4)
     if game.Workspace:FindFirstChild("ring") then
         local TweenService = game:GetService("TweenService")
-        local Tw = TweenService:Create(humrp, TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+        local Tw = TweenService:Create(humrp, TweenInfo.new(1.3, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
         {CFrame = game.Workspace.ring.CFrame}):Play()
         wait(2.5)
         local TweenService = game:GetService("TweenService")
-        local Tw = TweenService:Create(humrp, TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+        local Tw = TweenService:Create(humrp, TweenInfo.new(1.3, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
         {CFrame = CFrame.new(1910.023193359375, 224.01171875, -2878.01318359375)}):Play()
     end
 until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
