@@ -1,4 +1,4 @@
---Yokaire
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -291,7 +291,7 @@ hum.MoveToFinished:wait()
 
 
 
-while true do wait()
+while true do wait(0.2)
     local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
     local args1 = {
         [1] = {
@@ -317,7 +317,22 @@ while true do wait()
     local Player = game:GetService("Players").LocalPlayer
     local char = Player.Character or Player.CharacterAdded:Wait()
     local humrp = char:WaitForChild("HumanoidRootPart")
-    humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room9.enemyFolder:FindFirstChild("Commander Leonaru").HumanoidRootPart.Position)
-    wait(1)
-    AB()
+    if game:GetService("Workspace").dungeon.room9.enemyFolder:FindFirstChild("Commander Leonaru") then
+        humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room9.enemyFolder:FindFirstChild("Commander Leonaru").HumanoidRootPart.Position)
+        wait(0.2)
+        AB()
+    elseif game:GetService("Workspace").dungeon.bossRoom.enemyFolder:FindFirstChild("Sarugami") then
+        humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.bossRoom.enemyFolder:FindFirstChild("Sarugami").HumanoidRootPart.Position)
+        wait(0.2)
+        AB()  
+    end
+    local argsk = {
+        [1] = {
+            [1] = {
+                ["\2"] = "skip"
+            },
+            [2] = "D"
+        }
+    }
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsk))
 end
