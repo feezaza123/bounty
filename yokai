@@ -1,4 +1,4 @@
---Yokaiw
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -211,7 +211,7 @@ repeat wait()
     local Player = game:GetService("Players").LocalPlayer
     local char = Player.Character or Player.CharacterAdded:Wait()
     local humrp = char:WaitForChild("HumanoidRootPart")
-    local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
+    local skill = Player:WaitForChild:("Backpack"):GetChildren()
     local args1 = {
         [1] = {
             [1] = {
@@ -234,9 +234,7 @@ repeat wait()
         game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
     end
     AB()
-pcall(function()
     humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty").HumanoidRootPart.Position)
-end)
 until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
 wait(4.5)
 game.Players.LocalPlayer.Character.Humanoid:MoveTo(Vector3.new(1913.2200927734375, 228.42137145996094, -3027.838134765625))
