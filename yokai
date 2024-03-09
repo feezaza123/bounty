@@ -1,4 +1,4 @@
---Yokaiwer
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -238,6 +238,8 @@ repeat wait()
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args21))
 until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
 wait(4.5)
+
+local hum = game.Players.LocalPlayer:WaitForChild("Character").Humanoid
 hum:MoveTo(Vector3.new(1913.2200927734375, 228.42137145996094, -3027.838134765625))
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(1913.4471435546875, 240.27456665039062, -3082.06689453125))
