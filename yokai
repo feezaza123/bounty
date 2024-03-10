@@ -364,15 +364,6 @@ hum:MoveTo(Vector3.new(2362.855712890625, 228.199951171875, -3343.43994140625))
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(2355.65966796875, 228.199951171875, -3289.366943359375))
 hum.MoveToFinished:wait()
-spawn(function()
-    if game:GetService("Workspace").dungeon.bossRoom.enemyFolder:FindFirstChild("Sarugami") then
-        repeat wait(3.5)
-            local TweenService = game:GetService("TweenService")
-            local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
-            {CFrame = CFrame.new(2262.23583984375, 9.996981620788574, -3134.125732421875)}):Play()
-        until not game:GetService("Workspace").dungeon.bossRoom.enemyFolder:FindFirstChild("Sarugami") 
-    end
-end)
 
 spawn(function()
 while true do wait(0.2)
