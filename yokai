@@ -1,4 +1,4 @@
---Yokai
+--Yokait
 repeat wait() until game:IsLoaded()
 repeat wait() until game:GetService("Workspace").dungeon.initialRoom:FindFirstChild("barrier")
 wait(1)
@@ -226,10 +226,12 @@ end)
 --LOOK
 spawn(function()
     while true do wait(0.2)
+        pcall(function()
         if game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") then
             local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
             humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty").HumanoidRootPart.Position)
         end
+    end)
     end
 end)
 
@@ -398,7 +400,9 @@ while true do wait(0.2)
     end
     local Player = game:GetService("Players").LocalPlayer
     local char = Player.Character or Player.CharacterAdded:Wait()
+    pcall(function()
     local humrp = char:WaitForChild("HumanoidRootPart")
+    end)
     pcall(function()
     if game:GetService("Workspace").dungeon.room9.enemyFolder:FindFirstChild("Commander Leonaru") then
         humrp.CFrame = CFrame.lookAt(humrp.Position, game:GetService("Workspace").dungeon.room9.enemyFolder:FindFirstChild("Commander Leonaru").HumanoidRootPart.Position)
