@@ -31,6 +31,9 @@ local argsgg = {
     }
 }
 wait(3)
+repeat wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Sell", true))()
+until #game:GetService("Players").LocalPlayer.PlayerGui.inventory.mainBackground.innerBackground.rightSideFrame.ScrollingFrame:GetChildren() < 285
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsgg))
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Main", true))()
