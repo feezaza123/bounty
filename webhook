@@ -1,0 +1,81 @@
+--Notification
+
+function SendMessage(url, message)
+    local http = game:GetService("HttpService")
+    local headers = {
+        ["Content-Type"] = "application/json"
+    }
+    local data = {
+        ["content"] = message
+    }
+    local body = http:JSONEncode(data)
+    local response = request({
+        Url = url,
+        Method = "POST",
+        Headers = headers,
+        Body = body
+    })
+    print("Sent")
+end
+function SendMessageEMBED(url, embed)
+    local http = game:GetService("HttpService")
+    local headers = {
+        ["Content-Type"] = "application/json"
+    }
+    local data = {
+        ["embeds"] = {
+            {
+                ["title"] = embed.title,
+                ["description"] = embed.description,
+                ["color"] = embed.color,
+                ["fields"] = embed.fields,
+                ["footer"] = {
+                    ["text"] = embed.footer.text
+                }
+            }
+        }
+    }
+    local body = http:JSONEncode(data)
+    local response = request({
+        Url = url,
+        Method = "POST",
+        Headers = headers,
+        Body = body
+    })
+    print("Sent")
+end
+--Examples 
+local printedLoot = {}
+local url = "https://discord.com/api/webhooks/1033363664692064327/T7igIQNGA6kML-Exm6EP0I26NKGVDgfDhWVVKzOgu36b6L3CfkWbWDSvSDRovxVTedlK"
+SendMessage(url, "LOOT DROP")
+pcall(function()
+while true do wait(1)
+	for _, v in pairs(game.Workspace:GetChildren()) do
+		if not printedLoot[v.Name] and v.ClassName == "StringValue" and v.Name ~= "stats" and v.Name ~= "dungeonProgress" and v.Name ~= "dungeonName" then
+            if v.rarity.Value == "epic" then local color = ":white_circle:"    
+            elseif v.rarity.Value == "common" then local color = ":purple_circle:" 
+            elseif v.rarity.Value == "uncommon" then local color = ":green_circle:" 
+            elseif v.rarity.Value == "rare" then local color = ":blue_circle:" 
+            elseif v.rarity.Value == "legendary" then local color = ":yellow_circle:" 
+            elseif v.rarity.Value == "ultimate" then local color = ":red_circle:"
+            end
+local embed = {
+    ["title"] = "This Loot You've gotten",
+    ["description"] = "The Loot Name:",
+    ["color"] = 65280,
+    ["fields"] = {
+        {
+            ["name"] = "--------",
+            ["value"] = v.Name .. color
+        },
+    },
+    ["footer"] = {
+        ["text"] = "Made by Hunter Shop"
+    }
+}
+SendMessageEMBED(url, embed)
+printedLoot[v.Name] = true
+        end
+    end
+end
+end)
