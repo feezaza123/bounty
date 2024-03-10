@@ -1,4 +1,4 @@
---Yokai
+--Yokaiw
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -40,7 +40,7 @@ local function checkmob()
     end
 end
 
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 28
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 29
 
 hum:MoveTo(Vector3.new(2825.901123046875, 31.3199462890625, -2076.94287109375))
 hum.MoveToFinished:wait(1)
@@ -393,14 +393,14 @@ while true do wait(0.2)
         wait(0.2)
         AB()  
     end
-    local argsk = {
+local args = {
+    [1] = {
         [1] = {
-            [1] = {
-                ["\2"] = "skip"
-            },
-            [2] = "D"
-        }
+            ["\2"] = "skip"
+        },
+        [2] = "F"
     }
-    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsk))
+}
+game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args))
 end
 end)
