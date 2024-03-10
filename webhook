@@ -47,7 +47,6 @@ end
 --Examples 
 local printedLoot = {}
 local url = "https://discord.com/api/webhooks/1033363664692064327/T7igIQNGA6kML-Exm6EP0I26NKGVDgfDhWVVKzOgu36b6L3CfkWbWDSvSDRovxVTedlK"
-SendMessage(url, "LOOT DROP")
 spawn(function()
 while true do wait(1)
 	for _, v in pairs(game.Workspace:GetChildren()) do
