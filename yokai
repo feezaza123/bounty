@@ -1,4 +1,4 @@
---Yokaiq
+--Yokai
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -304,7 +304,7 @@ hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(2049.658447265625, 231.37742614746094, -3347.58203125))
 hum.MoveToFinished:wait() wait(0.5)
 humrp.CFrame = CFrame.new(2051.140625, 246.4320831298828, -3352.306396484375)
-hum:MoveTo(Vector3.new(2067.071533203125, 243.73582458496094, -3378.99560546875))
+hum:MoveTo(Vector3.new(2068.271240234375, 242.6526641845703, -3386.731689453125))
 hum.MoveToFinished:wait()
 repeat wait()
     for i,v in pairs(game:GetService("Workspace").dungeon.room7.enemyFolder:GetChildren()) do
