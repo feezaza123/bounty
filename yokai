@@ -303,8 +303,8 @@ hum:MoveTo(Vector3.new(2021.4017333984375, 231.87002563476562, -3315.66772460937
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(2049.658447265625, 231.37742614746094, -3347.58203125))
 hum.MoveToFinished:wait() wait(0.5)
-humrp.CFrame = CFrame.new(2068.271240234375, 242.6526641845703, -3386.731689453125)
-hum:MoveTo(Vector3.new(2055.64453125, 243.74737548828125, -3372.3603515625))
+humrp.CFrame = CFrame.new(2051.140625, 246.4320831298828, -3352.306396484375)
+hum:MoveTo(Vector3.new(2067.071533203125, 243.73582458496094, -3378.99560546875))
 hum.MoveToFinished:wait()
 repeat wait()
     for i,v in pairs(game:GetService("Workspace").dungeon.room7.enemyFolder:GetChildren()) do
@@ -330,7 +330,7 @@ hum:MoveTo(Vector3.new(2236.221923828125, 228.1534423828125, -3433.52880859375))
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(2228.567626953125, 228.0937042236328, -3411.81005859375))
 hum.MoveToFinished:wait() wait(1)
-humrp.CFrame = CFrame.new(2219.959228515625, 245.68792724609375, -3399.791259765625)
+humrp.CFrame = CFrame.new(2221.494873046875, 245.1361846923828, -3404.101318359375)
 repeat wait()
     for i,v in pairs(game:GetService("Workspace").dungeon.room8.enemyFolder:GetChildren()) do
         if v.ClassName == "Model" then
@@ -393,15 +393,14 @@ while true do wait(0.2)
         wait(0.2)
         AB()  
     end
-local argsk = {
-    [1] = {
+    local argsk = {
         [1] = {
-            ["\2"] = "skip"
-        },
-        [2] = "F"
+            [1] = {
+                ["\2"] = "skip"
+            },
+            [2] = "D"
+        }
     }
-}
-
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsk))
 end
 end)
