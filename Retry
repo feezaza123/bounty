@@ -6,7 +6,7 @@ local argsex = {
             ["vote"] = true,
             ["\2"] = "vote"
         },
-        [2] = "\20"
+        [2] = "\22"
     }
 }
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsex))
