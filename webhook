@@ -1,4 +1,4 @@
---Notification
+--Notificationi
 
 function SendMessage(url, message)
     local http = game:GetService("HttpService")
@@ -48,11 +48,13 @@ end
 local printedLoot = {}
 local url = "https://discord.com/api/webhooks/1033363664692064327/T7igIQNGA6kML-Exm6EP0I26NKGVDgfDhWVVKzOgu36b6L3CfkWbWDSvSDRovxVTedlK"
 SendMessage(url, "LOOT DROP")
-spawn(function()
+pcall(function()
 while true do wait(1)
 	for _, v in pairs(game.Workspace:GetChildren()) do
 		if not printedLoot[v.Name] and v.ClassName == "StringValue" and v.Name ~= "stats" and v.Name ~= "dungeonProgress" and v.Name ~= "dungeonName" then
 local embed = {
+    ["title"] = "This Loot You've gotten",
+    ["description"] = "The Loot Name:",
     ["color"] = 65280,
     ["fields"] = {
         {
@@ -61,7 +63,7 @@ local embed = {
         },
     },
     ["footer"] = {
-        ["text"] = game.Players.LocalPlayer.Name
+        ["text"] = "Made by Hunter Shop"
     }
 }
 SendMessageEMBED(url, embed)
