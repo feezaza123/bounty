@@ -31,7 +31,6 @@ local args8 = {
     }
 }
 
-game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args))
 
 local args3 = {
     [1] = {
