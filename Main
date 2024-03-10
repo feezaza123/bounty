@@ -1,5 +1,7 @@
 --Yokai
 repeat wait() until game:IsLoaded()
+repeat wait() until game:GetService("Workspace").dungeon.initialRoom:FindFirstChild("barrier")
+wait(1)
 repeat wait(1) 
     game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
 until not game:GetService("Workspace").dungeon.initialRoom:FindFirstChild("barrier")
