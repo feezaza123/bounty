@@ -1,5 +1,5 @@
 --Notification
-
+if game.PlaceId ~= 2414851778 then
 function SendMessage(url, message)
     local http = game:GetService("HttpService")
     local headers = {
@@ -70,3 +70,4 @@ printedLoot[v.Name] = true
     end
 end
 end)
+end
