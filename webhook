@@ -1,4 +1,4 @@
---Notificationi
+--Notification
 
 function SendMessage(url, message)
     local http = game:GetService("HttpService")
@@ -53,8 +53,6 @@ while true do wait(1)
 	for _, v in pairs(game.Workspace:GetChildren()) do
 		if not printedLoot[v.Name] and v.ClassName == "StringValue" and v.Name ~= "stats" and v.Name ~= "dungeonProgress" and v.Name ~= "dungeonName" then
 local embed = {
-    ["title"] = "This Loot You've gotten",
-    ["description"] = "The Loot Name:",
     ["color"] = 65280,
     ["fields"] = {
         {
@@ -63,7 +61,7 @@ local embed = {
         },
     },
     ["footer"] = {
-        ["text"] = "Made by Hunter Shop"
+        ["text"] = game.Players.LocalPlayer.Name
     }
 }
 SendMessageEMBED(url, embed)
