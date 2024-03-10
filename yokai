@@ -1,5 +1,6 @@
 --Yokai
 repeat wait() until game:IsLoaded()
+repeat wait() until game:GetService("Workspace").dungeon.initialRoom:FindFirstChild("barrier")
 wait(1)
 repeat wait(1) 
     game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
@@ -307,15 +308,7 @@ hum:MoveTo(Vector3.new(1915.3919677734375, 240.27456665039062, -3107.68139648437
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(1924.1368408203125, 228.1981201171875, -3208.501220703125))
 hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(1895.3963623046875, 228.0937042236328, -3228.079833984375))
-hum.MoveToFinished:wait()
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1954.9327392578125, 228.10244750976562, -3363.670654296875)) wait(0.5)
-cooldown() wait(0.5) AB() wait(6.2) AB() wait(1)
 
-hum:MoveTo(Vector3.new(1926.88671875, 228.1217803955078, -3246.14306640625))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(1958.3648681640625, 228.0937042236328, -3278.1640625))
-hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(1975.78955078125, 228.0937042236328, -3297.52490234375))
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(2021.4017333984375, 231.87002563476562, -3315.667724609375))
