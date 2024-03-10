@@ -27,10 +27,10 @@ local argsgg = {
                 ["\2"] = "PlaySolo"
             }
         },
-        [2] = " "
+        [2] = "\""
     }
 }
-    wait(3)
+wait(3)
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsgg))
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Main", true))()
