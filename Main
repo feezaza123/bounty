@@ -6,18 +6,18 @@ local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
 local args1 = {
     [1] = {
         [1] = {
-            ["\28"] = skill[1]
+            ["\30"] = skill[1]
         },
-        [2] = "*"
+        [2] = ","
     }
 }
 
 local args2 = {
     [1] = {
         [1] = {
-            ["\28"] = skill[2]
+            ["\30"] = skill[2]
         },
-        [2] = "*"
+        [2] = ","
     }
 }
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 27
@@ -149,18 +149,18 @@ while true do wait()
 local args1 = {
     [1] = {
         [1] = {
-            ["\28"] = skill[1]
+            ["\30"] = skill[1]
         },
-        [2] = "*"
+        [2] = ","
     }
 }
 
 local args2 = {
     [1] = {
         [1] = {
-            ["\28"] = skill[2]
+            ["\30"] = skill[2]
         },
-        [2] = "*"
+        [2] = ","
     }
 }
     local Player = game:GetService("Players").LocalPlayer
