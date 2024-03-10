@@ -1,4 +1,4 @@
---Notification
+--Notification1
 
 function SendMessage(url, message)
     local http = game:GetService("HttpService")
@@ -65,8 +65,8 @@ local embed = {
     ["color"] = 65280,
     ["fields"] = {
         {
-            ["name"] = "--------",
-            ["value"] = v.Name .. color
+            ["name"] = color,
+            ["value"] = v.Name
         },
     },
     ["footer"] = {
