@@ -1,4 +1,4 @@
---Notification1
+--Notification
 
 function SendMessage(url, message)
     local http = game:GetService("HttpService")
@@ -52,20 +52,13 @@ pcall(function()
 while true do wait(1)
 	for _, v in pairs(game.Workspace:GetChildren()) do
 		if not printedLoot[v.Name] and v.ClassName == "StringValue" and v.Name ~= "stats" and v.Name ~= "dungeonProgress" and v.Name ~= "dungeonName" then
-            if v.rarity.Value == "epic" then local color = ":white_circle:"    
-            elseif v.rarity.Value == "common" then local color = ":purple_circle:" 
-            elseif v.rarity.Value == "uncommon" then local color = ":green_circle:" 
-            elseif v.rarity.Value == "rare" then local color = ":blue_circle:" 
-            elseif v.rarity.Value == "legendary" then local color = ":yellow_circle:" 
-            elseif v.rarity.Value == "ultimate" then local color = ":red_circle:"
-            end
 local embed = {
     ["title"] = "This Loot You've gotten",
     ["description"] = "The Loot Name:",
     ["color"] = 65280,
     ["fields"] = {
         {
-            ["name"] = color,
+            ["name"] = v.rarity.Value,
             ["value"] = v.Name
         },
     },
