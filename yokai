@@ -1,4 +1,4 @@
---Yokait
+--Yokait7
 repeat wait() until game:IsLoaded()
 repeat wait() until game:GetService("Workspace").dungeon.initialRoom:FindFirstChild("barrier")
 wait(1)
@@ -175,16 +175,16 @@ hum.MoveToFinished:wait(0.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1921.021484375, 172.79693603515625, -2713.142578125)) wait(0.5)
 cooldown() AB()
 
-hum:MoveTo(Vector3.new(1957.6968994140625, 172.0328369140625, -2752.909423828125))
-hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(1924.1590576171875, 172.7986297607422, -2709.3837890625))
-hum.MoveToFinished:wait()
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1882.07666015625, 172.79995727539062, -2770.78271484375)) wait(1)
-cooldown() AB()
-hum:MoveTo(Vector3.new(1938.952392578125, 173.0401611328125, -2682.687255859375))
-hum.MoveToFinished:wait(0.5)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1877.3804931640625, 172.79937744140625, -2778.019775390625)) wait(1)
-cooldown() AB()
+repeat wait()
+    for i,v in pairs(game:GetService("Workspace").dungeon.room7.enemyFolder:GetChildren()) do
+        if v.ClassName == "Model" then
+            humrp.CFrame = CFrame.lookAt(humrp.Position, v.HumanoidRootPart.Position)
+        end
+    end
+    wait(0.5)
+    AB()
+until not game:GetService("Workspace").dungeon.room5:FindFirstChild("barrier")
+
 hum:MoveTo(Vector3.new(1905.6041259765625, 172.79995727539062, -2796.180908203125))
 hum.MoveToFinished:wait(0.5)
 
