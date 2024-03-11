@@ -315,10 +315,12 @@ hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(2021.4017333984375, 231.87002563476562, -3315.667724609375))
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(2049.658447265625, 231.37742614746094, -3347.58203125))
-hum.MoveToFinished:wait() wait(0.5)
+hum.MoveToFinished:wait() wait(0.5) wait(0.5)
 humrp.CFrame = CFrame.new(2051.140625, 246.4320831298828, -3352.306396484375)
+wait(1)
 hum:MoveTo(Vector3.new(2068.271240234375, 242.6526641845703, -3386.731689453125))
 hum.MoveToFinished:wait()
+wait(0.5)
 repeat wait()
     for i,v in pairs(game:GetService("Workspace").dungeon.room7.enemyFolder:GetChildren()) do
         if v.ClassName == "Model" then
