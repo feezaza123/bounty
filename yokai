@@ -395,10 +395,8 @@ while true do wait(0.2)
     pcall(function()
     if game:GetService("Workspace").dungeon.room9.enemyFolder:FindFirstChild("Commander Leonaru") then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.lookAt(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, game:GetService("Workspace").dungeon.room9.enemyFolder:FindFirstChild("Commander Leonaru").HumanoidRootPart.Position)
-        wait(0.5)
+        wait(0.6)
         AB()
-        wait(0.7)
-        game.Players.LocalPlayer.Character.Humanoid.Health = 0
     elseif game:GetService("Workspace").dungeon.bossRoom.enemyFolder:FindFirstChild("Sarugami") then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.lookAt(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, game:GetService("Workspace").dungeon.bossRoom.enemyFolder:FindFirstChild("Sarugami").HumanoidRootPart.Position)
         wait(0.5)
