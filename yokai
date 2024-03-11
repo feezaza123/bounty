@@ -350,11 +350,13 @@ wait(0.3)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2290.99658203125, 228.1732940673828, -3404.859375)) wait(0.5)
 AB() wait(6.2) AB() wait(6.2) AB() wait(3)
 repeat wait()
+    pcall(function()
     for i,v in pairs(game:GetService("Workspace").dungeon.room8.enemyFolder:GetChildren()) do
         if v.ClassName == "Model" then
             humrp.CFrame = CFrame.lookAt(humrp.Position, v.HumanoidRootPart.Position)
         end
     end
+    end)
     wait(0.5)
     AB()
 until not game:GetService("Workspace").dungeon.room8:FindFirstChild("barrier")
