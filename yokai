@@ -363,7 +363,7 @@ hum:MoveTo(Vector3.new(2269.180419921875, 228.199951171875, -3431.86767578125))
 hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(2362.855712890625, 228.199951171875, -3343.43994140625))
 hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(2355.65966796875, 228.199951171875, -3289.366943359375))
+hum:MoveTo(Vector3.new(2359.954345703125, 228.0937042236328, -3218.602294921875))
 hum.MoveToFinished:wait()
 
 spawn(function()
