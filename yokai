@@ -373,7 +373,7 @@ hum.MoveToFinished:wait()
 AB() wait(6.2) AB() wait(2)
 
 spawn(function()
-    while true do wait(2)
+    while true do wait(5)
     pcall(function()
     if game:GetService("Workspace").dungeon.room9.enemyFolder:FindFirstChild("Commander Leonaru") and game.Players.LocalPlayer.Character.HumanoidRootPart then
         local TweenService = game:GetService("TweenService")
