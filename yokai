@@ -413,6 +413,10 @@ while true do wait(0.2)
         wait(0.5)
         AB()
     elseif game:GetService("Workspace").dungeon.bossRoom.enemyFolder:FindFirstChild("Sarugami") then
+        for i = 0,3,1 do
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrmae.new(2357.066650390625, 231.67469787597656, -3184.053466796875)
+        wait(1)
+        end
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.lookAt(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, game:GetService("Workspace").dungeon.bossRoom.enemyFolder:FindFirstChild("Sarugami").HumanoidRootPart.Position)
         wait(0.5)
         AB()  
