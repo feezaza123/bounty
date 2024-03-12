@@ -50,7 +50,7 @@ local url = "https://discord.com/api/webhooks/1033363664692064327/T7igIQNGA6kML-
 spawn(function()
 while true do wait(1)
 	for _, v in pairs(game.Workspace:GetChildren()) do
-		if not printedLoot[v.Name] and v.ClassName == "StringValue" and v.Name ~= "stats" and v.Name ~= "dungeonProgress" and v.Name ~= "dungeonName" then
+		if not printedLoot[v.Name] and v.ClassName == "StringValue" and v.Name ~= "stats" and v.Name ~= "dungeonProgress" and v.Name ~= "dungeonName" and v.rarity then
 local embed = {
     ["color"] = 65280,
     ["fields"] = {
