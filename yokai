@@ -388,7 +388,7 @@ end)
 
 
 spawn(function()
-    while true do wait(5)
+    while true do wait(2.5)
     pcall(function()
     if game:GetService("Workspace").dungeon.room9.enemyFolder:FindFirstChild("Commander Leonaru") and game.Players.LocalPlayer.Character.HumanoidRootPart and game:GetService("Players").LocalPlayer.Backpack["Void Dragon"].cooldown.Value >= 3 then
         local TweenService = game:GetService("TweenService")
