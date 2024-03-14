@@ -1,82 +1,80 @@
-local PathfindingService = game:GetService("PathfindingService")
-
---for loop that packs all objects scanned into table
-function pack_all(obj,class_filtering,...)
-    local final = {}
-    local Classes = {...}
-    for _,v in pairs(obj:GetDescendants()) do
-        if class_filtering then
-            for _,f in pairs(Classes) do
-                if v:IsA(f) then
-                    table.insert(final,v)
-                end
-            end
-        else
-            table.insert(final,v)
-        end
-    end
-    return final
+_G.AutoDodgeSkill = true
+_G.NameProof = true
+_G.NoClipAfter = 999
+_G.DodgeSize = 2.25
+local list = {
+name = {"telegraph"},
+ping = 90,
+get_ping_cd = false,
+}
+if _G.Rec then _G.Rec:Disconnect() _G.Rec = nil end
+_G.Rec = workspace.Folders.Debris.ChildAdded:Connect(function(v)
+if _G.AutoDodgeSkill and table.find(list.name,v.Name:lower()) and v.Material ~= Enum.Material.Neon then
+local op = v.Material
+wait(.4-(GetPing()))
+local a = v:Clone()
+local side = math.clamp(_G.DodgeSize,1.5,3)
+local Sizeto = v.Size + Vector3.new(side,100,side)
+a.Size = Vector3.new(0,100,v.Size.Z)
+if v.ClassName == "MeshPart" then
+a.Size = Vector3.new(0,0,100)
+Sizeto = v.Size + Vector3.new(side,side,100)
 end
-
-function scan_until_nil(obj)
-    local start = pack_all(obj,false)
-    local iscompleted = false
-    local temp = {}
-    local is_first = true
-    local final = {}
-    local temp1 = {}
-    while wait() do
-        if not iscompleted then
-            if is_first then
-                is_first = false
-                temp = start
-                for _,v in pairs(temp) do
-                    print('getting : '..v.Name)
-                    table.insert(final,v)
-                end
-            else
-                if next(temp) ~= nil then
-                    temp1 = temp
-                    for _,v in pairs(temp) do
-                        table.insert(final,v)
-                    end
-                    temp = {}
-                    for _,v in pairs(temp1) do
-                        print('getting : '..v.Name)
-                        local ting = pack_all(v,false)
-                        for _,f in pairs(ting) do
-                            table.insert(temp,f)
-                        end
-                    end
-                else
-                    iscompleted = true
-                    return final
-                end
-            end
-        end
-    end
+game:GetService("TweenService"):Create(a,TweenInfo.new(0.08),{Size = Sizeto}):Play()
+a.Anchored = true
+a.Transparency = 1
+a.CanCollide = true
+a.Name = "DODGEPART"
+a.Parent = v.Parent
+local start = tick()
+repeat
+wait()
+until tick() - start > _G.NoClipAfter or not v.Parent
+a:Destroy()
 end
-
-function get_all()
-    local start = pack_all(game,false)
-    local final = {}
-    for _,v in pairs(start) do
-        local list1 = pack_all(v,false)
-        if list1 ~= {} then
-            
-        end
-    end
+end)
+local Barrier = workspace.GameMap:FindFirstChild("Barrier",true)
+if Barrier then Barrier:ClearAllChildren() end
+function GetPing()
+spawn(function()
+if not list.get_ping_cd then
+list.get_ping_cd = true
+local PacketSend = tick()
+local Packet = game:GetService("ReplicatedStorage").RemoteFunctions.MainRemoteFunction:InvokeServer("CompleteDailyQuest","DailyQuest_DungeonClear")
+repeat task.wait() until Packet
+local Ping = tick() - PacketSend
+list.ping = Ping
+delay(1,function()
+list.get_ping_cd = false
+end)
 end
-
-function destroy_game()
-   local todel = pack_all(game,false)
-   for _,v in pairs(todel) do
-    if todel ~= {} then
-        pack_all(v,false)
-    end
-   end
+end)
+return list.ping
 end
-
-for _,v in pairs(scan_until_nil(workspace)) do
-    v:Destroy()
+function Connection(Char)
+local Human = Char:WaitForChild("Humanoid")
+local Root = Char:WaitForChild("HumanoidRootPart")
+local Name = Char:FindFirstChild("PlayerName",true)
+if _G.NameProof and Name then Name:Destroy() end
+while task.wait() do
+if not Root then break end
+local SpawnLocation = game.Players.LocalPlayer.RespawnLocation
+local CFR = Root.CFrame
+if SpawnLocation.Position.Y - CFR.p.Y > 30 then
+local RayParams = RaycastParams.new()
+RayParams.FilterDescendantsInstances = Char:GetDescendants()
+RayParams.FilterType = Enum.RaycastFilterType.Blacklist
+local Ray = workspace:Raycast(CFR.p,Vector3.new(0,-100,0),RayParams)
+if Ray then
+Root.CFrame = CFrame.new(CFR.X,SpawnLocation.Position.Y+15,CFR.Z)
+else
+Root.CFrame = SpawnLocation.CFrame
 end
+end
+Human:SetStateEnabled(14,false)
+Human:SetStateEnabled(1,false)
+if not Char then break end
+end
+end
+game.Players.LocalPlayer.CharacterAdded:Connect(Connection)
+Connection(game.Players.LocalPlayer.Character)
