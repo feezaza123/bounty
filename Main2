@@ -1,3 +1,4 @@
+repeat wait() until game:IsLoaded()
 if game.PlaceId == 2414851778 then
     wait(5)
     y = 0
