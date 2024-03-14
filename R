@@ -8,49 +8,50 @@ ping = 90,
 get_ping_cd = false,
 }
 if _G.Rec then _G.Rec:Disconnect() _G.Rec = nil end
-_G.Rec = workspace.Folders.Debris.ChildAdded:Connect(function(v)
-if _G.AutoDodgeSkill and table.find(list.name,v.Name:lower()) and v.Material ~= Enum.Material.Neon then
-local op = v.Material
-wait(.4-(GetPing()))
-local a = v:Clone()
-local side = math.clamp(_G.DodgeSize,1.5,3)
-local Sizeto = v.Size + Vector3.new(side,100,side)
-a.Size = Vector3.new(0,100,v.Size.Z)
-if v.ClassName == "MeshPart" then
-a.Size = Vector3.new(0,0,100)
-Sizeto = v.Size + Vector3.new(side,side,100)
-end
-game:GetService("TweenService"):Create(a,TweenInfo.new(0.08),{Size = Sizeto}):Play()
-a.Anchored = true
-a.Transparency = 1
-a.CanCollide = true
-a.Name = "DODGEPART"
-a.Parent = v.Parent
-local start = tick()
-repeat
-wait()
-until tick() - start > _G.NoClipAfter or not v.Parent
-a:Destroy()
-end
+_G.Rec = Workspace.ChildAdded:Connect(function(v)
+    if _G.AutoDodgeSkill and table.find(list.name,v.Name:lower()) and v.Material ~= Enum.Material.Neon then
+            local op = v.Material
+            wait(.4-(GetPing()))
+            local a = v:Clone()
+            local side = math.clamp(_G.DodgeSize,1.5,3)
+            local Sizeto = v.Size + Vector3.new(side,100,side)
+            a.Size = Vector3.new(0,100,v.Size.Z)
+            if v.ClassName == "MeshPart" then
+                a.Size = Vector3.new(0,0,100)
+                Sizeto = v.Size + Vector3.new(side,side,100)
+            end
+        game:GetService("TweenService"):Create(a,TweenInfo.new(0.08),{Size = Sizeto}):Play()
+        a.Anchored = true
+        a.Transparency = 1
+        a.CanCollide = true
+        a.Name = "DODGEPART"
+        a.Parent = v.Parent
+        local start = tick()
+        repeat
+            wait()
+        until tick() - start > _G.NoClipAfter or not v.Parent
+        a:Destroy()
+    end
 end)
 local Barrier = workspace.GameMap:FindFirstChild("Barrier",true)
 if Barrier then Barrier:ClearAllChildren() end
 function GetPing()
 spawn(function()
-if not list.get_ping_cd then
-list.get_ping_cd = true
-local PacketSend = tick()
-local Packet = game:GetService("ReplicatedStorage").RemoteFunctions.MainRemoteFunction:InvokeServer("CompleteDailyQuest","DailyQuest_DungeonClear")
-repeat task.wait() until Packet
-local Ping = tick() - PacketSend
-list.ping = Ping
-delay(1,function()
-list.get_ping_cd = false
-end)
-end
+    if not list.get_ping_cd then
+        list.get_ping_cd = true
+        local PacketSend = tick()
+        local Packet = game:GetService("ReplicatedStorage").RemoteFunctions.MainRemoteFunction:InvokeServer("CompleteDailyQuest","DailyQuest_DungeonClear")
+        repeat task.wait() until Packet
+        local Ping = tick() - PacketSend
+        list.ping = Ping
+        delay(1,function()
+            list.get_ping_cd = false
+        end)
+    end
 end)
 return list.ping
 end
+
 function Connection(Char)
 local Human = Char:WaitForChild("Humanoid")
 local Root = Char:WaitForChild("HumanoidRootPart")
