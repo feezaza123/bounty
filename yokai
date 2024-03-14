@@ -81,7 +81,9 @@ hum.MoveToFinished:wait()
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2583.410888671875, 8.49999713897705, -2311.311767578125)) wait(0.2)
 AB() wait(6.2) AB() wait(1)
 repeat wait()
+pcall(function()
 checkmob()
+end)
 until not game:GetService("Workspace").dungeon.room1:FindFirstChild("barrier")
 --END2
 
