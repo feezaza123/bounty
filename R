@@ -8,7 +8,7 @@ ping = 90,
 get_ping_cd = false,
 }
 if _G.Rec then _G.Rec:Disconnect() _G.Rec = nil end
-_G.Rec = Workspace.ChildAdded:Connect(function(v)
+_G.Rec = workspace.Folders.Debris.ChildAdded:Connect(function(v)
     if _G.AutoDodgeSkill and table.find(list.name,v.Name:lower()) and v.Material ~= Enum.Material.Neon then
             local op = v.Material
             wait(.4-(GetPing()))
