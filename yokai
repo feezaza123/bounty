@@ -209,7 +209,7 @@ repeat wait(2)
         local Tw = TweenService:Create(humrp, TweenInfo.new(1.7, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
         {CFrame = game.Workspace.ring.CFrame}):Play()
     end
-until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
+until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") and game.Players.LocalPlayer.Chatacter:FindFirstChild("HumanoidRootPart")
 end)
 
 spawn(function()
