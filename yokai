@@ -1,4 +1,4 @@
---Yokait
+--Yokai
 repeat wait() until game:IsLoaded()
 repeat wait() until game:GetService("Workspace").dungeon.initialRoom:FindFirstChild("barrier")
 wait(1)
@@ -154,8 +154,10 @@ hum:MoveTo(Vector3.new(2181.860595703125, 95.3819808959961, -2744.142578125)) --
 hum.MoveToFinished:wait(0.5)
 hum:MoveTo(Vector3.new(2151.9013671875, 113.2391128540039, -2739.031494140625)) --***
 hum.MoveToFinished:wait(0.5)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2073.755615234375, 117.28099822998047, -2728.67529296875)) wait(1)
-AB() wait(3.0) 
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2074.71484375, 117.19998168945312, -2767.021484375)) wait(1)
+AB() wait(2)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2073.755615234375, 117.28099822998047, -2728.67529296875)) wait(0.5)
+cooldown() wait(0.5) AB() wait(3.2)
 hum:MoveTo(Vector3.new(2193.76220703125, 86.6324462890625, -2743.18701171875))
 hum.MoveToFinished:wait(0.5)
 hum:MoveTo(Vector3.new(2151.9013671875, 113.2391128540039, -2739.031494140625)) --***
@@ -163,10 +165,6 @@ hum.MoveToFinished:wait(0.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2073.755615234375, 117.28099822998047, -2728.67529296875)) wait(0.5)
 cooldown() wait(0.5) AB() wait(0.2)
 
-humrp.CFrame = CFrame.new(2145.062255859375, 127.1841812133789, -2731.062255859375)
-wait(0.7)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(2074.71484375, 117.19998168945312, -2767.021484375)) wait(0.5)
-cooldown() wait(0.5) AB() wait(1)
 hum:MoveTo(Vector3.new(2012.200439453125, 144.59429931640625, -2742.510986328125))
 hum.MoveToFinished:wait(0.5)
 
