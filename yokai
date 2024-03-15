@@ -217,7 +217,8 @@ repeat wait()
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args21))
     end)
 until not game:GetService("Workspace").dungeon.room5:FindFirstChild("barrier")
-
+wait(1)
+local hum = game.Players.LocalPlayer.Character.Humanoid
 hum:MoveTo(Vector3.new(1905.6041259765625, 172.79995727539062, -2796.180908203125))
 hum.MoveToFinished:wait(0.5)
 
