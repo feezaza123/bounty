@@ -60,7 +60,7 @@ game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsp))
     end
 end)
 
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 29
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 31
 
 hum:MoveTo(Vector3.new(2825.901123046875, 31.3199462890625, -2076.94287109375))
 hum.MoveToFinished:wait(1)
@@ -152,6 +152,7 @@ until not game:GetService("Workspace").dungeon.room4:FindFirstChild("barrier")
 
 hum:MoveTo(Vector3.new(2181.860595703125, 95.3819808959961, -2744.142578125)) --***
 hum.MoveToFinished:wait(0.5)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 35
 hum:MoveTo(Vector3.new(2152.115234375, 113.26962280273438, -2752.291259765625)) --***
 hum.MoveToFinished:wait(0.5)
 hum:MoveTo(Vector3.new(2126.94580078125, 117.19998168945312, -2751.3837890625)) --***
@@ -167,7 +168,7 @@ hum:MoveTo(Vector3.new(2012.200439453125, 144.59429931640625, -2742.510986328125
 hum.MoveToFinished:wait(0.5)
 
 ---GO TO MOB 2 BOSS
-
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 30
 hum:MoveTo(Vector3.new(1984.6195068359375, 163.19943237304688, -2748.2392578125))
 hum.MoveToFinished:wait(0.5)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1923.7122802734375, 172.798583984375, -2717.875)) wait(1)
