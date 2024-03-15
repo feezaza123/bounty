@@ -1,4 +1,4 @@
---Yokai
+--Yokaio
 repeat wait() until game:IsLoaded()
 repeat wait() until game:GetService("Workspace").dungeon.initialRoom:FindFirstChild("barrier")
 wait(1)
