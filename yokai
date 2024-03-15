@@ -189,7 +189,6 @@ humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1889.43115234375, 172.7
 cooldown() wait(0.5) AB()
 
 repeat wait()
-    if not game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then break end
     pcall(function()
     for i,v in pairs(game:GetService("Workspace").dungeon.room5.enemyFolder:GetChildren()) do
         if v.ClassName == "Model" then
