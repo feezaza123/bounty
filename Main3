@@ -28,7 +28,7 @@ local argsgg = {
                 ["\2"] = "PlaySolo"
             }
         },
-        [2] = "\""
+        [2] = "$"
     }
 }
 wait(3)
