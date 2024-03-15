@@ -410,7 +410,7 @@ local argsu = {
         [1] = {
             ["\2"] = "skip"
         },
-        [2] = "F"
+        [2] = "G"
     }
 }
 game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsu))
