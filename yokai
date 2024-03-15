@@ -60,7 +60,7 @@ game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsp))
     end
 end)
 
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 31
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 30
 
 hum:MoveTo(Vector3.new(2825.901123046875, 31.3199462890625, -2076.94287109375))
 hum.MoveToFinished:wait(1)
