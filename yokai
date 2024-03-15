@@ -189,13 +189,34 @@ humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1889.43115234375, 172.7
 cooldown() wait(0.5) AB()
 
 repeat wait()
+    if not game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then break end
+    pcall(function()
     for i,v in pairs(game:GetService("Workspace").dungeon.room5.enemyFolder:GetChildren()) do
         if v.ClassName == "Model" then
-            humrp.CFrame = CFrame.lookAt(humrp.Position, v.HumanoidRootPart.Position)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.lookAt(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, v.HumanoidRootPart.Position)
         end
     end
     wait(0.5)
-    AB()
+    local skill = game.Players.LocalPlayer:WaitForChild("Backpack"):GetChildren()
+    local args11 = {
+        [1] = {
+            [1] = {
+                ["\30"] = skill[1]
+            },
+            [2] = ","
+        }
+    }
+    local args21 = {
+        [1] = {
+            [1] = {
+                ["\30"] = skill[2]
+            },
+            [2] = ","
+        }
+    }
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args11)) 
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args21))
+    end)
 until not game:GetService("Workspace").dungeon.room5:FindFirstChild("barrier")
 
 hum:MoveTo(Vector3.new(1905.6041259765625, 172.79995727539062, -2796.180908203125))
