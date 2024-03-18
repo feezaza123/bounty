@@ -358,7 +358,7 @@ wait(0.5)
 repeat wait()
     for i,v in pairs(game:GetService("Workspace").dungeon.room7.enemyFolder:GetChildren()) do
         if v.ClassName == "Model" then
-            humrp.CFrame = CFrame.lookAt(humrp.Position, v.HumanoidRootPart.Position)
+            humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(v.HumanoidRootPart.Position.X, humrp.Position.Y, v.HumanoidRootPart.Position.Z))         
         end
     end
     wait(0.5)
@@ -387,7 +387,7 @@ repeat wait()
     pcall(function()
     for i,v in pairs(game:GetService("Workspace").dungeon.room8.enemyFolder:GetChildren()) do
         if v.ClassName == "Model" then
-            humrp.CFrame = CFrame.lookAt(humrp.Position, v.HumanoidRootPart.Position)
+            humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(v.HumanoidRootPart.Position.X, humrp.Position.Y, v.HumanoidRootPart.Position.Z))    
         end
     end
     end)
