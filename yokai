@@ -289,7 +289,7 @@ repeat wait()
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args11)) 
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args21))
 until not game:GetService("Workspace").dungeon.room6.enemyFolder:FindFirstChild("Sangor, the Bloodthirsty") 
-wait(4.5)
+wait(7)
 
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
