@@ -404,7 +404,7 @@ hum.MoveToFinished:wait()
 AB() wait(6.2) AB() wait(2)
 
 spawn(function()
-    while true do wait(5)
+    while true do wait(10)
 local argsu = {
     [1] = {
         [1] = {
