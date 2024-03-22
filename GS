@@ -1,4 +1,4 @@
---GS
+--GSt
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 29
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -74,7 +74,7 @@ humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(637.8030395507812, 86.4
 Q() wait(0.2)   
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(638.2958984375, 86.52481842041016, 77.70684051513672)) wait(0.2)
 E() wait(3)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(634.792724609375, 86.8960952758789, 48.494049072265625)) wait(2.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(634.792724609375, 86.8960952758789, 48.494049072265625)) wait(3.2)
 Q() wait(0.2)
 
 hum:MoveTo(Vector3.new(646.8099975585938, 88.19574737548828, -78.44796752929688))
