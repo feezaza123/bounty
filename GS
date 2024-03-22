@@ -6,6 +6,22 @@ repeat wait(1)
     game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
 until not game:GetService("Workspace").dungeon.initialRoom:FindFirstChild("barrier")
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 29
+
+spawn(function()
+        while true do wait(2)
+        local argsp = {
+            [1] = {
+                [1] = {
+                    ["vote"] = true,
+                    ["\2"] = "vote"
+                },
+                [2] = "\26"
+            }
+        }
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsp))
+        end
+end)
+
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
 local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
