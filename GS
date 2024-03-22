@@ -1,3 +1,4 @@
+--GSf
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 29
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
@@ -34,7 +35,8 @@ game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
 end
 
 hum:MoveTo(Vector3.new(28.875011444091797, 32.93378829956055, -0.29335924983024597))
-hum.MoveToFinished:wait() 
+hum.MoveToFinished:wait() wait(0.2)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(133.25717163085938, 31.466339111328125, 0.3790523409843445)) wait(0.2)
 Q() wait(0.7)
 
 hum:MoveTo(Vector3.new(202.25247192382812, 32.8148307800293, -1.1402117013931274))
