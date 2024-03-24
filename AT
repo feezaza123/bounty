@@ -1,4 +1,4 @@
---AT
+--ATp
 
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 29
 local hum = game.Players.LocalPlayer.Character.Humanoid 
@@ -82,12 +82,16 @@ hum:MoveTo(Vector3.new(-1585.21630859375, 35.52519226074219, 2325.0869140625))
 hum.MoveToFinished:wait() wait(0.2)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-1599.037841796875, 34.71410369873047, 2324.975341796875)) wait(0.2)
 Q() wait(0.5)
-hum:MoveTo(Vector3.new(-1851.9306640625, 35.52523422241211, 2322.931884765625))
+
+hum:MoveTo(Vector3.new(-1848.5472412109375, 35.261138916015625, 2326.15380859375))
 hum.MoveToFinished:wait()
-hum:MoveTo(Vector3.new(-1865.720458984375, 52.260040283203125, 2244.738525390625))
+
+hum:MoveTo(Vector3.new(-1854.069091796875, 52.259124755859375, 2242.497802734375))
 hum.MoveToFinished:wait()
+
 hum:MoveTo(Vector3.new(-1971.3050537109375, 73.68182373046875, 2239.880615234375))
 hum.MoveToFinished:wait() wait(0.2)
+
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-1983.5623779296875, 75.79437255859375, 2240.033447265625)) wait(0.2)
 E() wait(0.5)
 hum:MoveTo(Vector3.new(-2029.3668212890625, 81.17999267578125, 2240.89794921875))
