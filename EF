@@ -1,4 +1,4 @@
---EF
+--EFu
 
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 29
 
@@ -60,7 +60,7 @@ humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-36.04893493652344, 5.0
 Q() wait(0.2)
 hum:MoveTo(Vector3.new(-41.87077331542969, 4.999998569488525, -28.27369499206543))
 hum.MoveToFinished:wait() wait(0.2)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-77.5959701538086, 4.999998569488525, -27.719221115112305)) wait(0.2)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-162.82960510253906, 4.507662773132324, -33.85757064819336)) wait(0.2)
 E() wait(1)
 hum:MoveTo(Vector3.new(-255.70204162597656, 4.376957893371582, -44.34358215332031))
 hum.MoveToFinished:wait()
