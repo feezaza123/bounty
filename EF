@@ -4,12 +4,11 @@ repeat wait() until game:GetService("Workspace").dungeon.initialRoom:FindFirstCh
 wait(1)
 repeat wait(2)
     game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
+until not game:GetService("Workspace").dungeon.initialRoom:FindFirstChild("barrier")
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 29
     local TweenService = game:GetService("TweenService")
     local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(2.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
     {CFrame = CFrame.new(123.22370147705078, 7.8409104347229, -44.46415710449219)}):Play()
-until not game:GetService("Workspace").dungeon.initialRoom:FindFirstChild("barrier")
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 29
-
 spawn(function()
         while true do wait(2)
         local argsp = {
