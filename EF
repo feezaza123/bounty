@@ -1,4 +1,4 @@
---EF
+--EFi
 
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 29
 
@@ -81,4 +81,44 @@ hum.MoveToFinished:wait()
 hum:MoveTo(Vector3.new(-679.8215942382812, -25.154605865478516, 283.9159851074219))
 hum.MoveToFinished:wait() wait(0.2)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-801.0331420898438, -24.4062557220459, 251.40184020996094)) wait(0.2)
-E() wait(0.2)
+E() wait(0.5)
+
+hum:MoveTo(Vector3.new(-750.6663208007812, -24.4062557220459, 240.66001892089844))
+hum.MoveToFinished:wait()
+
+hum:MoveTo(Vector3.new(-862.7389526367188, -23.476970672607422, 288.1893310546875))
+hum.MoveToFinished:wait() wait(0.2)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-861.7092895507812, -24.257854461669922, 292.3403625488281)) wait(0.2)
+Q() wait(0.5)
+
+hum:MoveTo(Vector3.new(-843.81298828125, -24.4062557220459, 450.87823486328125))
+hum.MoveToFinished:wait() wait(0.2)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-836.7040405273438, -24.367191314697266, 455.04730224609375)) wait(0.2)
+E() wait(0.5)
+
+hum:MoveTo(Vector3.new(-716.1874389648438, -24.4062557220459, 486.4590759277344))
+hum.MoveToFinished:wait() wait(0.2)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-706.26025390625, -24.4401798248291, 483.1243591308594)) wait(0.2)
+Q() wait(2)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-673.3262329101562, -24.4062557220459, 459.7698669433594))
+wait(6.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-684.469970703125, -23.85148811340332, 450.3738708496094)) wait(0.5)
+E() wait(1) --BOSS2
+
+hum:MoveTo(Vector3.new(-787.4013671875, -24.636371612548828, 528.5579223632812))
+hum.MoveToFinished:wait() wait(0.2)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-794.2548828125, -24.4062557220459, 533.0462646484375)) wait(0.2)
+Q() wait(0.2) wait(3)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-806.0325317382812, -24.4062557220459, 547.6043090820312)) wait(0.2)
+E() wait(1)
+hum:MoveTo(Vector3.new(-869.5474853515625, -24.4062557220459, 579.0817260742188))
+hum.MoveToFinished:wait()
+hum:MoveTo(Vector3.new(-862.3887939453125, -24.371078491210938, 612.5753784179688))
+hum.MoveToFinished:wait() wait(0.3)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-883.0996704101562, -24.4062557220459, 617.3992309570312)) wait(0.2)
+Q()
+
+
+
+
+ 
