@@ -1,4 +1,4 @@
---EFn
+--EF
 
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 29
 
@@ -68,13 +68,16 @@ hum:MoveTo(Vector3.new(-303.343017578125, -11.80347728729248, -38.54550170898437
 hum.MoveToFinished:wait() wait(0.2)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-325.52044677734375, -18.9930362701416, -44.504920959472656)) wait(0.2)
 Q() wait(0.5) --BOSS1
-hum:MoveTo(Vector3.new(-486.8239440917969, -24.4062557220459, 36.30624008178711))
-hum.MoveToFinished:wait() wait(0.2)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-492.82440185546875, -24.370412826538086, 45.446128845214844)) wait(0.2)
+hum:MoveTo(Vector3.new(-473.8005676269531, -24.06349754333496, -17.098737716674805))
+hum.MoveToFinished:wait()
+
+hum:MoveTo(Vector3.new(-495.0585632324219, -24.190908432006836, 46.57440948486328))
+hum.MoveToFinished:wait() wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-501.70611572265625, -24.4062557220459, 57.34225845336914)) wait(0.2)
 E() wait(1)
-hum:MoveTo(Vector3.new(-506.2218017578125, -24.322948455810547, 30.729461669921875))
-hum.MoveToFinished:wait() wait(0.2)
-humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-533.8463134765625, -24.4062557220459, 65.81230926513672)) wait(0.2)
+hum:MoveTo(Vector3.new(-513.143798828125, -24.4062557220459, 34.096431732177734))
+hum.MoveToFinished:wait() wait(0.5)
+humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(-529.1595458984375, -24.4062557220459, 54.85527038574219)) wait(0.2)
 Q() wait(0.7)
 hum:MoveTo(Vector3.new(-641.0650634765625, -24.4062557220459, 247.32760620117188))
 hum.MoveToFinished:wait()
