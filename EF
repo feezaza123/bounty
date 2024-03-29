@@ -48,11 +48,13 @@ local args2 = {
 }
 
 local function Q()
-    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) 
+game:GetService("VirtualInputManager"):SendKeyEvent(true,"Q",false,game)
+game:GetService("VirtualInputManager"):SendKeyEvent(false,"Q",false,game)
 end
 
 local function E()
-    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2)) 
+game:GetService("VirtualInputManager"):SendKeyEvent(true,"E",false,game)
+game:GetService("VirtualInputManager"):SendKeyEvent(false,"E",false,game)
 end
 
 local function AB()
