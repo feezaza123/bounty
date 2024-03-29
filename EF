@@ -19,7 +19,7 @@ spawn(function()
                     ["vote"] = true,
                     ["\2"] = "vote"
                 },
-                [2] = "\26"
+                [2] = "\28"
             }
         }
     game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsp))
@@ -34,7 +34,7 @@ local args1 = {
         [1] = {
             ["\30"] = skill[1]
         },
-        [2] = ","
+        [2] = ")"
     }
 }
 
@@ -43,7 +43,7 @@ local args2 = {
         [1] = {
             ["\30"] = skill[2]
         },
-        [2] = ","
+        [2] = ")"
     }
 }
 
