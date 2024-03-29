@@ -32,9 +32,9 @@ local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
 local args1 = {
     [1] = {
         [1] = {
-            ["\30"] = skill[1]
+            ["\31"] = skill[1]
         },
-        [2] = ")"
+        [2] = "*"
     }
 }
 
