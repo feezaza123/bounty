@@ -16,13 +16,13 @@ spawn(function()
 local argsp = {
     [1] = {
         [1] = {
-            ["\5"] = "vote",
-            ["vote"] = true
+            ["vote"] = true,
+            ["\2"] = "vote"
         },
-        [2] = "\28"
+        [2] = "\27"
     }
 }
-    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsp))
+game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsp))
         end
 end)
 
