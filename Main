@@ -164,6 +164,6 @@ while true do wait()
     local char = Player.Character or Player.CharacterAdded:Wait()
     local humrp = char:WaitForChild("HumanoidRootPart")
     humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1060.71, 84.2022, -52.5533))
-    wait(0.8)
+    wait(1.5)
     AB()
 end
