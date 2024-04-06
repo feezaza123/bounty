@@ -1,6 +1,8 @@
 repeat wait() until game:IsLoaded()
-wait(2)
-game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
+repeat wait() until game:GetService("Workspace").dungeon.initialRoom:FindFirstChild("barrier")
+repeat wait(2)
+    game:GetService("ReplicatedStorage").remotes.changeStartValue:FireServer()
+until not game:GetService("Workspace").dungeon.initialRoom:FindFirstChild("barrier")
 local hum = game.Players.LocalPlayer.Character.Humanoid
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
 local args1 = {
