@@ -7,53 +7,25 @@ repeat wait(1)
 until not game:GetService("Workspace").dungeon.initialRoom:FindFirstChild("barrier")
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 29
 
-spawn(function()
-        while true do wait(2)
-        local argsp = {
-            [1] = {
-                [1] = {
-                    ["vote"] = true,
-                    ["\2"] = "vote"
-                },
-                [2] = "\26"
-            }
-        }
-    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsp))
-        end
-end)
-
 local hum = game.Players.LocalPlayer.Character.Humanoid 
 local skill = game:GetService("Players").LocalPlayer.Backpack:GetChildren()
 local humrp = game.Players.LocalPlayer.Character.HumanoidRootPart
-local args1 = {
-    [1] = {
-        [1] = {
-            ["\30"] = skill[1]
-        },
-        [2] = ","
-    }
-}
-
-local args2 = {
-    [1] = {
-        [1] = {
-            ["\30"] = skill[2]
-        },
-        [2] = ","
-    }
-}
 
 local function Q()
-    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) 
+game:GetService("VirtualInputManager"):SendKeyEvent(true,"Q",false,game)
+game:GetService("VirtualInputManager"):SendKeyEvent(false,"Q",false,game)
 end
 
 local function E()
-    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2)) 
+game:GetService("VirtualInputManager"):SendKeyEvent(true,"E",false,game)
+game:GetService("VirtualInputManager"):SendKeyEvent(false,"E",false,game)
 end
 
 local function AB()
-game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args1)) 
-game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(args2))
+game:GetService("VirtualInputManager"):SendKeyEvent(true,"E",false,game)
+game:GetService("VirtualInputManager"):SendKeyEvent(false,"E",false,game)
+game:GetService("VirtualInputManager"):SendKeyEvent(true,"Q",false,game)
+game:GetService("VirtualInputManager"):SendKeyEvent(false,"Q",false,game)
 end
 
 hum:MoveTo(Vector3.new(28.875011444091797, 32.93378829956055, -0.29335924983024597))
@@ -143,6 +115,21 @@ humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1167.3089599609375, 147
 Q() wait(0.2)
 humrp.CFrame = CFrame.lookAt(humrp.Position, Vector3.new(1154.25439453125, 146.63597106933594, -774.3560791015625)) wait(0.2)
 E() wait(2)
+
+spawn(function()
+        while true do wait(2)
+local argsp = {
+    [1] = {
+        [1] = {
+            ["vote"] = true,
+            ["\2"] = "vote"
+        },
+        [2] = "\27"
+    }
+}
+    game:GetService("ReplicatedStorage").dataRemoteEvent:FireServer(unpack(argsp))
+        end
+end)
 
 hum:MoveTo(Vector3.new(1161.69091796875, 149.68862915039062, -918.8399658203125))
 hum.MoveToFinished:wait() 
