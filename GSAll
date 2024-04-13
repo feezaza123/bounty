@@ -1,5 +1,4 @@
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/webhook", true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/Checkinventory", true))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/FixLag", true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/feezaza123/bounty/main/GSMain", true))()
